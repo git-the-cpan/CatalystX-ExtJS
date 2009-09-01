@@ -18,7 +18,7 @@ use Scalar::Util qw/ weaken /;
 
 use Lingua::EN::Inflect;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Moose;
 
@@ -385,7 +385,7 @@ __END__
 
 =head1 NAME
 
-CatalystX::Controller::ExtJS::REST
+CatalystX::Controller::ExtJS::REST - RESTful interface to dbic objects
 
 =head1 SYNOPSIS
 

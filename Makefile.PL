@@ -4,7 +4,6 @@ name     'CatalystX-ExtJS';
 all_from 'lib/CatalystX/ExtJS.pm';
 author   'Moritz Onken <onken@netcubed.de>';
 license  'BSD';
-version '0.02';
 
 
 requires 'Config::Any' => '0.17';

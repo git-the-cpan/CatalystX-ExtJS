@@ -1,5 +1,6 @@
 package CatalystX::Controller::ExtJS::REST;
 
+our $VERSION = '0.04';
 
 use base qw(Catalyst::Controller::REST);
 

@@ -11,7 +11,6 @@ inc/Module/Install/Metadata.pm
 inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 lib/CatalystX/Action/ExtJS/Deserialize.pm
-lib/CatalystX/Controller/ExtJS.pm
 lib/CatalystX/Controller/ExtJS/ImageChooser.pm
 lib/CatalystX/Controller/ExtJS/REST.pm
 lib/CatalystX/ExtJS.pm

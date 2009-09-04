@@ -20,6 +20,7 @@ no_index:
     - inc
     - t
 requires:
+  Catalyst::Action::RenderView: 0
   Catalyst::Model::DBIC::Schema: 0
   Catalyst::Request::REST::ForBrowsers: 0
   Catalyst::Runtime: 5.8
@@ -32,4 +33,4 @@ requires:
   Path::Class: 0
 resources:
   license: http://opensource.org/licenses/bsd-license.php
-version: 0.04
+version: 0.05

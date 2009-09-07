@@ -28,9 +28,10 @@ requires:
   DBIx::Class: 0
   HTML::Entities: 0
   HTML::FormFu::ExtJS: 0.07
+  HTML::FormFu::Model::DBIC: 0
   JSON: 0
   Lingua::EN::Inflect: 0
   Path::Class: 0
 resources:
   license: http://opensource.org/licenses/bsd-license.php
-version: 0.05
+version: 0.06

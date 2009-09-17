@@ -4,7 +4,7 @@ author:
   - 'Moritz Onken <onken@netcubed.de>'
 build_requires:
   ExtUtils::MakeMaker: 6.42
-  Test::More: 0
+  Test::More: 0.92
   Test::WWW::Mechanize::Catalyst: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.42
@@ -21,7 +21,7 @@ no_index:
     - t
 requires:
   Catalyst::Action::RenderView: 0
-  Catalyst::Model::DBIC::Schema: 0
+  Catalyst::Model::DBIC::Schema: 0.29
   Catalyst::Request::REST::ForBrowsers: 0
   Catalyst::Runtime: 5.8
   Catalyst::View::TT: 0
@@ -35,4 +35,4 @@ requires:
   Path::Class: 0
 resources:
   license: http://opensource.org/licenses/bsd-license.php
-version: 0.08
+version: 0.09

@@ -73,6 +73,10 @@ MyApp->run( $port, $host, {
 
 myapp_server.pl - Catalyst Testserver
 
+=head1 VERSION
+
+version 0.10
+
 =head1 SYNOPSIS
 
 myapp_server.pl [options]

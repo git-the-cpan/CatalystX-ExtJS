@@ -1,5 +1,6 @@
 package
   MyApp;
+our $VERSION = '0.10';
   
 use Moose;  
 

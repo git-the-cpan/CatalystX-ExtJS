@@ -70,6 +70,10 @@ __END__
 
 CatalystX::Controller::ExtJS::ImageChooser - Controller for the ExtJS ImageChooser class
 
+=head1 VERSION
+
+version 0.10
+
 =head1 SYNOPSIS
 
   package MyApp::Controller::Images;

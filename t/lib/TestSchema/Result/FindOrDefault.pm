@@ -1,5 +1,6 @@
 package
   TestSchema::Result::FindOrDefault;
+our $VERSION = '0.10';
 
 use base 'DBIx::Class';
 

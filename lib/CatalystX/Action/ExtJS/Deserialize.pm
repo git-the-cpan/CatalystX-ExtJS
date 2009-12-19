@@ -1,4 +1,5 @@
 package CatalystX::Action::ExtJS::Deserialize;
+our $VERSION = '0.10';
 
 use strict;
 use warnings;

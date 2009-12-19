@@ -1,5 +1,6 @@
 package # hide
     TestSchema::ResultSet::User;
+our $VERSION = '0.10';
 
 use base 'DBIx::Class::ResultSet';
 

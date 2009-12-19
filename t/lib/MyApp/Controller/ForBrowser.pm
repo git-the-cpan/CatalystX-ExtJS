@@ -1,5 +1,6 @@
 package
   MyApp::Controller::ForBrowser;
+our $VERSION = '0.10';
   
 use base 'CatalystX::Controller::ExtJS::REST';
 

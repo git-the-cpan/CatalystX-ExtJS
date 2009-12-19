@@ -1,6 +1,9 @@
 NAME
     CatalystX::ExtJS - Collection of modules for ExtJS
 
+VERSION
+    version 0.10
+
 MODULES
     CatalystX::Controller::ExtJS::REST
         RESTful interface to your data objects.
@@ -9,7 +12,7 @@ MODULES
         Controller class for the ExtJS ImageChooser component.
 
 AUTHOR
-    Moritz Onken, `onken@netcubed.de'
+    Moritz Onken, "onken@netcubed.de"
 
 CONTRIBUTORS
     Mario Minati

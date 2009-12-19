@@ -10,6 +10,10 @@ __END__
 
 CatalystX::ExtJS - Collection of modules for ExtJS
 
+=head1 VERSION
+
+version 0.10
+
 =head1 MODULES
 
 =over

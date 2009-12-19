@@ -1,5 +1,6 @@
 package # hide
 TestSchema::ResultSet::FindOrDefault;
+our $VERSION = '0.10';
 
 use strict;
 use warnings;

@@ -1,7 +1,7 @@
 
 package
   MyApp::Controller::SkipEnd;
-our $VERSION = '0.10';
+our $VERSION = '0.11';
   
 use base 'CatalystX::Controller::ExtJS::REST';
 

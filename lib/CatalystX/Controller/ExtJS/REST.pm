@@ -1,6 +1,5 @@
 package CatalystX::Controller::ExtJS::REST;
-
-our $VERSION = '0.05';
+our $VERSION = '0.11';
 
 use base qw(Catalyst::Controller::REST);
 
@@ -159,7 +158,7 @@ sub paging_rs : Private {
     undef $sort unless($form->get_all_element({ nested_name => $sort }));
     
     my $paged = $rs->search(undef, { offset => $start, rows => $limit || undef});
-    $paged = $paged->search(undef, { order_by => [ { $direction => $sort } ] })
+    $paged = $paged->search(undef, { order_by => [ { $direction => 'me.' . $sort } ] })
       if $sort;
     return $paged;
 }
@@ -413,7 +412,7 @@ CatalystX::Controller::ExtJS::REST - RESTful interface to dbic objects
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 SYNOPSIS
 

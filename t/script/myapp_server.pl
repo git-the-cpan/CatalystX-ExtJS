@@ -75,7 +75,7 @@ myapp_server.pl - Catalyst Testserver
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 SYNOPSIS
 

@@ -2,7 +2,7 @@ NAME
     CatalystX::ExtJS - Collection of modules for ExtJS
 
 VERSION
-    version 0.10
+    version 0.11
 
 MODULES
     CatalystX::Controller::ExtJS::REST

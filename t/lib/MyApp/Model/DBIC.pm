@@ -1,6 +1,6 @@
 package
   MyApp::Model::DBIC;
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 use Moose;
 extends 'Catalyst::Model::DBIC::Schema';

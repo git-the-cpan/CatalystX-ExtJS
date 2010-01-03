@@ -11,7 +11,7 @@ WriteMakefile(
   NAME      => 'CatalystX::ExtJS',
   AUTHOR    => "Moritz\ Onken\ \<onken\@netcubed\.de\>",
   ABSTRACT  => "Collection\ of\ modules\ for\ ExtJS",
-  VERSION   => '0.10',
+  VERSION   => '0.11',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'bsd') : ()),
   PREREQ_PM    => {

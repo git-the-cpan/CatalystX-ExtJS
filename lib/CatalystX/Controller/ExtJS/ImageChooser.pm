@@ -1,6 +1,5 @@
 package CatalystX::Controller::ExtJS::ImageChooser;
-
-our $VERSION = '0.05';
+our $VERSION = '0.11';
 
 use strict;
 
@@ -72,7 +71,7 @@ CatalystX::Controller::ExtJS::ImageChooser - Controller for the ExtJS ImageChoos
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 SYNOPSIS
 

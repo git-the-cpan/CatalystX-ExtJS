@@ -1,6 +1,6 @@
 package
   MyApp::Controller::User;
-our $VERSION = '0.10';
+our $VERSION = '0.11';
   
 use base 'CatalystX::Controller::ExtJS::REST';
 

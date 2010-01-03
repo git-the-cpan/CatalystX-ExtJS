@@ -26,4 +26,4 @@ requires:
   Test::WWW::Mechanize::Catalyst: 0
 resources:
   repository: http://github.com/monken/catalystx-extjs
-version: 0.10
+version: 0.11

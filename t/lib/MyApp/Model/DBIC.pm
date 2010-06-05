@@ -1,6 +1,14 @@
+# 
+# This file is part of CatalystX-ExtJS
+# 
+# This software is Copyright (c) 2010 by Moritz Onken.
+# 
+# This is free software, licensed under:
+# 
+#   The (three-clause) BSD License
+# 
 package
   MyApp::Model::DBIC;
-our $VERSION = '0.11';
 
 use Moose;
 extends 'Catalyst::Model::DBIC::Schema';
@@ -14,7 +22,7 @@ __PACKAGE__->config({
 after BUILD => sub {
     my $self = shift;
     my $schema = $self->schema;
-    eval('use SQL::Translator 0.09003;');
+    eval('use SQL::Translator 0.11005;');
     if ($@) {
         my $sql;
         {
@@ -31,8 +39,9 @@ after BUILD => sub {
         }
     }
     else {
+        unlink('t/sqlite.sql') if(-e 't/sqlite.sql');
         $schema->deploy;
-        $schema->create_ddl_dir( ['SQLite'], undef, undef, undef,
+        $schema->create_ddl_dir( ['SQLite'], undef, './', undef,
             { add_drop_table => 0 } );
     }
 };

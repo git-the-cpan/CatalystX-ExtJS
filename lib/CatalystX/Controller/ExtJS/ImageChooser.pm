@@ -1,10 +1,20 @@
+# 
+# This file is part of CatalystX-ExtJS
+# 
+# This software is Copyright (c) 2010 by Moritz Onken.
+# 
+# This is free software, licensed under:
+# 
+#   The (three-clause) BSD License
+# 
 package CatalystX::Controller::ExtJS::ImageChooser;
-our $VERSION = '0.11';
+BEGIN {
+  $CatalystX::Controller::ExtJS::ImageChooser::VERSION = '1.101560';
+}
+# ABSTRACT: Controller for the ExtJS ImageChooser class
 
 use strict;
-
 use Carp;
-
 use Path::Class;
 
 use base 'Catalyst::Controller', 'Class::Accessor::Fast';
@@ -62,8 +72,9 @@ q(please specify __PACKAGE__->config({image_chooser_dir => '...', image_chooser_
 
 1;
 
-__END__
 
+
+=pod
 
 =head1 NAME
 
@@ -71,7 +82,7 @@ CatalystX::Controller::ExtJS::ImageChooser - Controller for the ExtJS ImageChoos
 
 =head1 VERSION
 
-version 0.11
+version 1.101560
 
 =head1 SYNOPSIS
 
@@ -91,9 +102,9 @@ version 0.11
   # output is available at /images
   
   1;
-  
+
 Example at L<http://www.extjs.com/deploy/dev/examples/view/chooser.html>.
-  
+
 =head1 DESCRIPTION
 
 This module generates an object which can be serialized to a json string. The ImageChooser class of ExtJS expects
@@ -104,14 +115,18 @@ files from C<root/static/images/subdir>. You cannot access directories, which ar
 
 =head1 AUTHOR
 
-  Moritz Onken
+  Moritz Onken <onken@netcubed.de>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2009 by Moritz Onken.
+This software is Copyright (c) 2010 by Moritz Onken.
 
 This is free software, licensed under:
 
   The (three-clause) BSD License
 
 =cut
+
+
+__END__
+

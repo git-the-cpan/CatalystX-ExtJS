@@ -1,6 +1,14 @@
+# 
+# This file is part of CatalystX-ExtJS
+# 
+# This software is Copyright (c) 2010 by Moritz Onken.
+# 
+# This is free software, licensed under:
+# 
+#   The (three-clause) BSD License
+# 
 package
   MyApp;
-our $VERSION = '0.11';
   
 use Moose;  
 
@@ -12,7 +20,7 @@ __PACKAGE__->config(
     'default_view' => 'TT'
 );
 
-__PACKAGE__->setup;
+__PACKAGE__->setup(qw(-Debug));
 
 
 1;

@@ -1,26 +1,14 @@
-NAME
-    CatalystX::ExtJS - Collection of modules for ExtJS
 
-VERSION
-    version 0.11
 
-MODULES
-    CatalystX::Controller::ExtJS::REST
-        RESTful interface to your data objects.
+This archive contains the distribution CatalystX-ExtJS,
+version 1.101560:
 
-    CatalystX::Controller::ExtJS::ImageChooser
-        Controller class for the ExtJS ImageChooser component.
+  Collection of modules for ExtJS
 
-AUTHOR
-    Moritz Onken, "onken@netcubed.de"
+This software is Copyright (c) 2010 by Moritz Onken.
 
-CONTRIBUTORS
-    Mario Minati
+This is free software, licensed under:
 
-COPYRIGHT AND LICENSE
-    This software is Copyright (c) 2009 by Moritz Onken.
+  The (three-clause) BSD License
 
-    This is free software, licensed under:
-
-      The (three-clause) BSD License
 

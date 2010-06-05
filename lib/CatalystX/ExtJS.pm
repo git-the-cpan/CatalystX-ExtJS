@@ -1,9 +1,22 @@
+# 
+# This file is part of CatalystX-ExtJS
+# 
+# This software is Copyright (c) 2010 by Moritz Onken.
+# 
+# This is free software, licensed under:
+# 
+#   The (three-clause) BSD License
+# 
 package CatalystX::ExtJS;
-our $VERSION = '0.11';
-
+BEGIN {
+  $CatalystX::ExtJS::VERSION = '1.101560';
+}
+# ABSTRACT: Collection of modules for ExtJS
 1;
 
-__END__
+
+
+=pod
 
 =head1 NAME
 
@@ -11,11 +24,27 @@ CatalystX::ExtJS - Collection of modules for ExtJS
 
 =head1 VERSION
 
-version 0.11
+version 1.101560
+
+=head1 TUTORIALS
+
+L<CatalystX::ExtJS::Tutorial>.
+
+=over
+
+=item L<CatalystX::ExtJS::Tutorial::Direct>
+
+How to use Ext.Direct and L<CatalystX::Controller::ExtJS::Direct::API>.
+
+=back
 
 =head1 MODULES
 
 =over
+
+=item L<CatalystX::Controller::ExtJS::Direct::API>
+
+Generate an API for Ext.Direct from Catalyst Actions.
 
 =item L<CatalystX::Controller::ExtJS::REST>
 
@@ -27,20 +56,24 @@ Controller class for the ExtJS ImageChooser component.
 
 =back
 
-=head1 AUTHOR
-
-Moritz Onken, C<onken@netcubed.de>
-
 =head1 CONTRIBUTORS
 
 Mario Minati
 
+=head1 AUTHOR
+
+  Moritz Onken <onken@netcubed.de>
+
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2009 by Moritz Onken.
+This software is Copyright (c) 2010 by Moritz Onken.
 
 This is free software, licensed under:
 
   The (three-clause) BSD License
 
 =cut
+
+
+__END__
+

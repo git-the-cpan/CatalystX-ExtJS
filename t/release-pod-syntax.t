@@ -1,4 +1,13 @@
 #!perl
+# 
+# This file is part of CatalystX-ExtJS
+# 
+# This software is Copyright (c) 2010 by Moritz Onken.
+# 
+# This is free software, licensed under:
+# 
+#   The (three-clause) BSD License
+# 
 
 BEGIN {
   unless ($ENV{RELEASE_TESTING}) {
@@ -9,7 +18,7 @@ BEGIN {
 
 use Test::More;
 
-eval "use Test::Pod 1.00";
-plan skip_all => "Test::Pod 1.00 required for testing POD" if $@;
+eval "use Test::Pod 1.41";
+plan skip_all => "Test::Pod 1.41 required for testing POD" if $@;
 
 all_pod_files_ok();

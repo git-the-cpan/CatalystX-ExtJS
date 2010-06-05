@@ -1,4 +1,13 @@
 #!/usr/bin/perl -w
+# 
+# This file is part of CatalystX-ExtJS
+# 
+# This software is Copyright (c) 2010 by Moritz Onken.
+# 
+# This is free software, licensed under:
+# 
+#   The (three-clause) BSD License
+# 
 
 BEGIN { 
     $ENV{CATALYST_ENGINE} ||= 'HTTP';
@@ -72,10 +81,6 @@ MyApp->run( $port, $host, {
 =head1 NAME
 
 myapp_server.pl - Catalyst Testserver
-
-=head1 VERSION
-
-version 0.11
 
 =head1 SYNOPSIS
 

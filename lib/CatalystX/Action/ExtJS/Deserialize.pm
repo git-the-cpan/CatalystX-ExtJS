@@ -1,13 +1,47 @@
+# 
+# This file is part of CatalystX-ExtJS
+# 
+# This software is Copyright (c) 2010 by Moritz Onken.
+# 
+# This is free software, licensed under:
+# 
+#   The (three-clause) BSD License
+# 
 package CatalystX::Action::ExtJS::Deserialize;
-our $VERSION = '0.11';
-
+BEGIN {
+  $CatalystX::Action::ExtJS::Deserialize::VERSION = '1.101560';
+}
+# ABSTRACT: Skip deserialization for uploads
 use strict;
 use warnings;
 
 use base 'Catalyst::Action::Deserialize';
 
-use Catalyst::Request::REST::ForBrowsers;
+sub execute {
+    my ( $self, $controller, $c ) = @_;
 
+    if (   $c->req->is_ext_upload )
+    {
+        return 1;
+    }
+    else {
+        return $self->next::method( $controller, $c );
+    }
+}
+
+1;
+
+
+
+=pod
+
+=head1 NAME
+
+CatalystX::Action::ExtJS::Deserialize - Skip deserialization for uploads
+
+=head1 VERSION
+
+version 1.101560
 
 =head1 PUBLIC METHODS
 
@@ -18,18 +52,20 @@ from ExtJS and has multipart form data, so usually an upload.
 
 =cut
 
-sub execute {
-    my ($self, $controller, $c) = @_;
-    my $class = 'Catalyst::Request::REST::ForBrowsers';
-    $c->request_class($class) unless($c->request_class->isa($class));
-    
-    if($c->req->param('x-requested-by') && $c->req->param('x-requested-by') eq "ExtJS"
-          && $c->req->header('Content-Type') && $c->req->header('Content-Type') =~ /^multipart\/form-data/ ) {
-              return 1;
-          } else {
-              return $self->next::method($controller, $c);
-          }
-}
+=head1 AUTHOR
+
+  Moritz Onken <onken@netcubed.de>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2010 by Moritz Onken.
+
+This is free software, licensed under:
+
+  The (three-clause) BSD License
+
+=cut
 
 
-1;
+__END__
+

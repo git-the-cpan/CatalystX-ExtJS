@@ -11,6 +11,7 @@ my %module_build_args = (
     'Catalyst::Engine::HTTP' => '0',
     'Catalyst::Model::DBIC::Schema' => '0',
     'Catalyst::Request::REST::ForBrowsers' => '0',
+    'Catalyst::View::JSON' => '0',
     'Catalyst::View::TT' => '0',
     'DBIx::Class' => '0',
     'DBIx::Class::ResultSet' => '0',
@@ -38,7 +39,7 @@ my %module_build_args = (
     'Moritz Onken <onken@netcubed.de>'
   ],
   'dist_name' => 'CatalystX-ExtJS',
-  'dist_version' => '1.101560',
+  'dist_version' => '1.101570',
   'license' => 'bsd',
   'module_name' => 'CatalystX::ExtJS',
   'recommends' => {},

@@ -7,6 +7,7 @@ build_requires:
   Catalyst::Engine::HTTP: 0
   Catalyst::Model::DBIC::Schema: 0
   Catalyst::Request::REST::ForBrowsers: 0
+  Catalyst::View::JSON: 0
   Catalyst::View::TT: 0
   DBIx::Class: 0
   DBIx::Class::ResultSet: 0
@@ -34,58 +35,62 @@ meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: CatalystX-ExtJS
+no_index:
+  directory:
+    - example
+    - tutorial
 provides:
   CatalystX::Action::ExtJS::Deserialize:
     file: lib/CatalystX/Action/ExtJS/Deserialize.pm
-    version: 1.101560
+    version: 1.101570
   CatalystX::Action::ExtJS::Direct:
     file: lib/CatalystX/Action/ExtJS/Direct.pm
-    version: 1.101560
+    version: 1.101570
   CatalystX::Action::ExtJS::REST:
     file: lib/CatalystX/Action/ExtJS/REST.pm
-    version: 1.101560
+    version: 1.101570
   CatalystX::Action::ExtJS::Serialize:
     file: lib/CatalystX/Action/ExtJS/Serialize.pm
-    version: 1.101560
+    version: 1.101570
   CatalystX::Controller::ExtJS::Direct:
     file: lib/CatalystX/Controller/ExtJS/Direct.pm
-    version: 1.101560
+    version: 1.101570
   CatalystX::Controller::ExtJS::Direct::API:
     file: lib/CatalystX/Controller/ExtJS/Direct/API.pm
-    version: 1.101560
+    version: 1.101570
   CatalystX::Controller::ExtJS::Direct::Route:
     file: lib/CatalystX/Controller/ExtJS/Direct/Route.pm
-    version: 1.101560
+    version: 1.101570
   CatalystX::Controller::ExtJS::Direct::Route::Chained:
     file: lib/CatalystX/Controller/ExtJS/Direct/Route.pm
-    version: 1.101560
+    version: 1.101570
   CatalystX::Controller::ExtJS::Direct::Route::Factory:
     file: lib/CatalystX/Controller/ExtJS/Direct/Route.pm
-    version: 1.101560
+    version: 1.101570
   CatalystX::Controller::ExtJS::Direct::Route::REST:
     file: lib/CatalystX/Controller/ExtJS/Direct/Route.pm
-    version: 1.101560
+    version: 1.101570
   CatalystX::Controller::ExtJS::Direct::Route::REST::ExtJS:
     file: lib/CatalystX/Controller/ExtJS/Direct/Route.pm
-    version: 1.101560
+    version: 1.101570
   CatalystX::Controller::ExtJS::ImageChooser:
     file: lib/CatalystX/Controller/ExtJS/ImageChooser.pm
-    version: 1.101560
+    version: 1.101570
   CatalystX::Controller::ExtJS::REST:
     file: lib/CatalystX/Controller/ExtJS/REST.pm
-    version: 1.101560
+    version: 1.101570
   CatalystX::ExtJS:
     file: lib/CatalystX/ExtJS.pm
-    version: 1.101560
+    version: 1.101570
   CatalystX::ExtJS::Tutorial:
     file: lib/CatalystX/ExtJS/Tutorial.pm
-    version: 1.101560
+    version: 1.101570
   CatalystX::ExtJS::Tutorial::Direct:
     file: lib/CatalystX/ExtJS/Tutorial/Direct.pm
-    version: 1.101560
+    version: 1.101570
   CatalystX::TraitFor::Request::ExtJS:
     file: lib/CatalystX/TraitFor/Request/ExtJS.pm
-    version: 1.101560
+    version: 1.101570
 requires:
   Carp: 0
   Catalyst::Action: 0
@@ -116,7 +121,7 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=CatalystX-ExtJS
   homepage: http://search.cpan.org/dist/CatalystX-ExtJS/
   repository: http://github.com/monken/catalystx-extjs
-version: 1.101560
+version: 1.101570
 x_Dist_Zilla:
   plugins:
     -
@@ -283,6 +288,10 @@ x_Dist_Zilla:
           type: requires
       name: Prereq
       version: 4.101550
+    -
+      class: Dist::Zilla::Plugin::MetaNoIndex
+      name: MetaNoIndex
+      version: 1.101550
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'

@@ -322,6 +322,7 @@ t/00-compile.t
 t/000-report-versions.t
 t/author-critic.t
 t/direct/api.t
+t/direct/json.t
 t/direct/router.t
 t/direct/router/rest_extjs.t
 t/lib/MyApp.pm
@@ -331,12 +332,14 @@ t/lib/MyApp/Controller/Calculator.pm
 t/lib/MyApp/Controller/FindOrDefault.pm
 t/lib/MyApp/Controller/ForBrowser.pm
 t/lib/MyApp/Controller/ForBrowsers.pm
+t/lib/MyApp/Controller/JSON.pm
 t/lib/MyApp/Controller/Nested/Controller.pm
 t/lib/MyApp/Controller/REST.pm
 t/lib/MyApp/Controller/RequestClass.pm
 t/lib/MyApp/Controller/SkipEnd.pm
 t/lib/MyApp/Controller/User.pm
 t/lib/MyApp/Model/DBIC.pm
+t/lib/MyApp/View/JSON.pm
 t/lib/MyApp/View/TT.pm
 t/lib/TestSchema.pm
 t/lib/TestSchema/Result/FindOrDefault.pm

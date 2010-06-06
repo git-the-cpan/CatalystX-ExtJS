@@ -9,7 +9,7 @@
 # 
 package CatalystX::Controller::ExtJS::REST;
 BEGIN {
-  $CatalystX::Controller::ExtJS::REST::VERSION = '1.101560';
+  $CatalystX::Controller::ExtJS::REST::VERSION = '1.101570';
 }
 # ABSTRACT: RESTful interface to dbic objects
 
@@ -112,7 +112,9 @@ sub _extjs_config_builder {
         find_method => 'find',
     };
     my $self_config   = $self->config || {};
-    my $parent_config = $c->config->{'ControllerX::ExtJS::REST'} || {};
+    my $parent_config = $self->merge_config_hashes( 
+        $c->config->{'ControllerX::ExtJS::REST'} || {}, 
+        $c->config->{'ControllerX::Controller::ExtJS::REST'} || {} );
 
     # merge hashes with right hand precedence
     my $merged_config = $self->merge_config_hashes( $defaults, $self_config );
@@ -537,7 +539,7 @@ CatalystX::Controller::ExtJS::REST - RESTful interface to dbic objects
 
 =head1 VERSION
 
-version 1.101560
+version 1.101570
 
 =head1 SYNOPSIS
 

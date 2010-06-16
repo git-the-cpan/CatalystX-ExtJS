@@ -1,8 +1,7 @@
 -- 
 -- Created by SQL::Translator::Producer::SQLite
--- Created on Sat Jun  5 16:29:43 2010
+-- Created on Mon Jun 14 12:57:31 2010
 -- 
-
 
 BEGIN TRANSACTION;
 

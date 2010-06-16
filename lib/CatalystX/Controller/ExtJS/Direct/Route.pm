@@ -1,15 +1,15 @@
-# 
+#
 # This file is part of CatalystX-ExtJS
-# 
+#
 # This software is Copyright (c) 2010 by Moritz Onken.
-# 
+#
 # This is free software, licensed under:
-# 
+#
 #   The (three-clause) BSD License
-# 
+#
 package CatalystX::Controller::ExtJS::Direct::Route;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::VERSION = '1.101570';
+  $CatalystX::Controller::ExtJS::Direct::Route::VERSION = '1.101670';
 }
 #ABSTRACT: Ext.Direct route object
 use Moose;
@@ -55,7 +55,7 @@ sub prepare_request {
 
 package CatalystX::Controller::ExtJS::Direct::Route::Chained;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::Chained::VERSION = '1.101570';
+  $CatalystX::Controller::ExtJS::Direct::Route::Chained::VERSION = '1.101670';
 }
 use Moose::Role;
 
@@ -95,7 +95,7 @@ sub build_url {
 
 package CatalystX::Controller::ExtJS::Direct::Route::REST;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::REST::VERSION = '1.101570';
+  $CatalystX::Controller::ExtJS::Direct::Route::REST::VERSION = '1.101670';
 }
 use Moose::Role;
 
@@ -173,13 +173,13 @@ sub prepare_request {
 
 package CatalystX::Controller::ExtJS::Direct::Route::REST::ExtJS;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::REST::ExtJS::VERSION = '1.101570';
+  $CatalystX::Controller::ExtJS::Direct::Route::REST::ExtJS::VERSION = '1.101670';
 }
 use Moose::Role;
 
 package CatalystX::Controller::ExtJS::Direct::Route::Factory;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::Factory::VERSION = '1.101570';
+  $CatalystX::Controller::ExtJS::Direct::Route::Factory::VERSION = '1.101670';
 }
 
 sub build {
@@ -223,11 +223,11 @@ CatalystX::Controller::ExtJS::Direct::Route - Ext.Direct route object
 
 =head1 VERSION
 
-version 1.101570
+version 1.101670
 
 =head1 AUTHOR
 
-  Moritz Onken <onken@netcubed.de>
+Moritz Onken <onken@netcubed.de>
 
 =head1 COPYRIGHT AND LICENSE
 

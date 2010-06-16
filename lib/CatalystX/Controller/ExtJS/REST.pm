@@ -1,15 +1,15 @@
-# 
+#
 # This file is part of CatalystX-ExtJS
-# 
+#
 # This software is Copyright (c) 2010 by Moritz Onken.
-# 
+#
 # This is free software, licensed under:
-# 
+#
 #   The (three-clause) BSD License
-# 
+#
 package CatalystX::Controller::ExtJS::REST;
 BEGIN {
-  $CatalystX::Controller::ExtJS::REST::VERSION = '1.101570';
+  $CatalystX::Controller::ExtJS::REST::VERSION = '1.101670';
 }
 # ABSTRACT: RESTful interface to dbic objects
 
@@ -539,7 +539,7 @@ CatalystX::Controller::ExtJS::REST - RESTful interface to dbic objects
 
 =head1 VERSION
 
-version 1.101570
+version 1.101670
 
 =head1 SYNOPSIS
 
@@ -946,7 +946,7 @@ returned in a document with the C<Content-type> set to C<text/html>.
 
 =head1 AUTHOR
 
-  Moritz Onken <onken@netcubed.de>
+Moritz Onken <onken@netcubed.de>
 
 =head1 COPYRIGHT AND LICENSE
 

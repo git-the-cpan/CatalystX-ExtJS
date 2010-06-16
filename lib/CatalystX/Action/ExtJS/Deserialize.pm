@@ -1,15 +1,15 @@
-# 
+#
 # This file is part of CatalystX-ExtJS
-# 
+#
 # This software is Copyright (c) 2010 by Moritz Onken.
-# 
+#
 # This is free software, licensed under:
-# 
+#
 #   The (three-clause) BSD License
-# 
+#
 package CatalystX::Action::ExtJS::Deserialize;
 BEGIN {
-  $CatalystX::Action::ExtJS::Deserialize::VERSION = '1.101570';
+  $CatalystX::Action::ExtJS::Deserialize::VERSION = '1.101670';
 }
 # ABSTRACT: Skip deserialization for uploads
 use strict;
@@ -41,7 +41,7 @@ CatalystX::Action::ExtJS::Deserialize - Skip deserialization for uploads
 
 =head1 VERSION
 
-version 1.101570
+version 1.101670
 
 =head1 PUBLIC METHODS
 
@@ -54,7 +54,7 @@ from ExtJS and has multipart form data, so usually an upload.
 
 =head1 AUTHOR
 
-  Moritz Onken <onken@netcubed.de>
+Moritz Onken <onken@netcubed.de>
 
 =head1 COPYRIGHT AND LICENSE
 

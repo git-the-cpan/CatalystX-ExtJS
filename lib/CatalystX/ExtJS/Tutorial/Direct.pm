@@ -1,15 +1,15 @@
-# 
+#
 # This file is part of CatalystX-ExtJS
-# 
+#
 # This software is Copyright (c) 2010 by Moritz Onken.
-# 
+#
 # This is free software, licensed under:
-# 
+#
 #   The (three-clause) BSD License
-# 
+#
 package CatalystX::ExtJS::Tutorial::Direct;
 BEGIN {
-  $CatalystX::ExtJS::Tutorial::Direct::VERSION = '1.101570';
+  $CatalystX::ExtJS::Tutorial::Direct::VERSION = '1.101670';
 }
 #ABSTRACT: Introduction to CatalystX::ExtJS::Direct
 1;
@@ -23,7 +23,7 @@ CatalystX::ExtJS::Tutorial::Direct - Introduction to CatalystX::ExtJS::Direct
 
 =head1 VERSION
 
-version 1.101570
+version 1.101670
 
 =head1 INTRODUCTION
 
@@ -61,19 +61,19 @@ the result:
  use JSON::XS;
 
  sub add : Chained('/') : Path : CaptureArgs(1) {
-	my($self,$c, $arg) = @_;
-	$c->stash->{add} = $arg;
+    my($self,$c, $arg) = @_;
+    $c->stash->{add} = $arg;
  }
 
  sub add_to : Chained('add') : PathPart('to') : Args(1) : Direct('add') {
-	my($self,$c,$arg) = @_;
-	$c->res->body( $c->stash->{add} + $arg );
+    my($self,$c,$arg) = @_;
+    $c->res->body( $c->stash->{add} + $arg );
  }
-	
+    
  sub echo : Local : Direct : DirectArgs(1) {
-	my ($self, $c) = @_;
-	$c->res->content_type('application/json');
-	$c->res->body(encode_json($c->req->data));
+    my ($self, $c) = @_;
+    $c->res->content_type('application/json');
+    $c->res->body(encode_json($c->req->data));
  }
 
 As you can see the C<add_to> action has the C<Direct> attribute attached
@@ -102,12 +102,12 @@ You should see something like this:
  --- 
  actions: 
    Calculator: 
-		- 
-		  len: 2
-		  name: add
-		- 
-		  len: 1
-		  name: echo
+        - 
+          len: 2
+          name: add
+        - 
+          len: 1
+          name: echo
  type: remoting
  url: /api/router
 
@@ -164,11 +164,11 @@ be located at C<root/forms/user.yml>:
   elements:
     - name: id
     - name: first
-	  constraint: Required
+      constraint: Required
     - name: last
-	  constraint: Required
+      constraint: Required
     - name: email
-	  constraint: Required
+      constraint: Required
 
 Since the columns C<first>, C<last> and C<email> were defined as 
 C<NOT NULL> columns, we have to add the C<Required> constraint to them.
@@ -217,7 +217,7 @@ Add a new controller C<lib/MyApp/Controller/User/DBIC.pm> and paste:
  # on those configuration parameters
  
  __PACKAGE__->config(
-	actions => { 
+    actions => { 
         setup  => { PathPart => 'user', Chained => '/' },
         # enable Direct on these actions
         create => { Direct => undef, DirectArgs => 1 }, 
@@ -226,19 +226,19 @@ Add a new controller C<lib/MyApp/Controller/User/DBIC.pm> and paste:
         delete => { Direct => undef }, 
         list   => { Direct => undef, DirectArgs => 1 },  
     },
-	class => 'DBIC::User',
-	use_json_boolean => 1,
-	create_requires => [qw(email first last)],
-	return_object => 1,
+    class => 'DBIC::User',
+    use_json_boolean => 1,
+    create_requires => [qw(email first last)],
+    return_object => 1,
  );
  
  # Catalyst::Controller::DBIC::API cannot handle scalars and arrayrefs so
  # we have to add a little hack
  
  before 'deserialize' => sub {
-	my ($self, $c) = @_;
-	$c->req->data($c->req->data->[0]) if(ref $c->req->data eq 'ARRAY');
-	$c->req->data(undef) unless(ref $c->req->data);
+    my ($self, $c) = @_;
+    $c->req->data($c->req->data->[0]) if(ref $c->req->data eq 'ARRAY');
+    $c->req->data(undef) unless(ref $c->req->data);
  };
  
  1;
@@ -263,7 +263,7 @@ one request.
 
 =head1 AUTHOR
 
-  Moritz Onken <onken@netcubed.de>
+Moritz Onken <onken@netcubed.de>
 
 =head1 COPYRIGHT AND LICENSE
 

@@ -1,15 +1,15 @@
-# 
+#
 # This file is part of CatalystX-ExtJS
-# 
+#
 # This software is Copyright (c) 2010 by Moritz Onken.
-# 
+#
 # This is free software, licensed under:
-# 
+#
 #   The (three-clause) BSD License
-# 
+#
 package CatalystX::TraitFor::Request::ExtJS;
 BEGIN {
-  $CatalystX::TraitFor::Request::ExtJS::VERSION = '1.101570';
+  $CatalystX::TraitFor::Request::ExtJS::VERSION = '1.101670';
 }
 # ABSTRACT: Sets the request method via a query parameter
 use Moose::Role;
@@ -45,7 +45,7 @@ CatalystX::TraitFor::Request::ExtJS - Sets the request method via a query parame
 
 =head1 VERSION
 
-version 1.101570
+version 1.101670
 
 =head1 METHODS
 
@@ -56,7 +56,7 @@ multipart form data, so usually an upload.
 
 =head1 AUTHOR
 
-  Moritz Onken <onken@netcubed.de>
+Moritz Onken <onken@netcubed.de>
 
 =head1 COPYRIGHT AND LICENSE
 

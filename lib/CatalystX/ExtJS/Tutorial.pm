@@ -1,15 +1,15 @@
-# 
+#
 # This file is part of CatalystX-ExtJS
-# 
+#
 # This software is Copyright (c) 2010 by Moritz Onken.
-# 
+#
 # This is free software, licensed under:
-# 
+#
 #   The (three-clause) BSD License
-# 
+#
 package CatalystX::ExtJS::Tutorial;
 BEGIN {
-  $CatalystX::ExtJS::Tutorial::VERSION = '1.101570';
+  $CatalystX::ExtJS::Tutorial::VERSION = '1.101670';
 }
 #ABSTRACT: Introduction to CatalystX::ExtJS
 1;
@@ -23,7 +23,7 @@ CatalystX::ExtJS::Tutorial - Introduction to CatalystX::ExtJS
 
 =head1 VERSION
 
-version 1.101570
+version 1.101670
 
 =head1 INTRODUCTION
 
@@ -58,9 +58,9 @@ Create C<lib/MyApp/View/TT.pm> with:
  extends 'Catalyst::View::TT::Alloy';
 
  __PACKAGE__->config( {
- 		CATALYST_VAR => 'c',
- 		INCLUDE_PATH => [ MyApp->path_to( 'root', 'src' ) ]
- 	} );
+         CATALYST_VAR => 'c',
+         INCLUDE_PATH => [ MyApp->path_to( 'root', 'src' ) ]
+     } );
  1;
 
 =head2 Step 3: Adjust the Root Controller
@@ -105,8 +105,8 @@ Now we create an action which will route any request to C</js/*> to
 the according template in C<root/src/js>.
 
  sub js : Path : Args {
-	my ($self, $c, $template) = @_;
-	$c->stash->{template} = $template;
+    my ($self, $c, $template) = @_;
+    $c->stash->{template} = $template;
  }
 
 =head2 Step 6: Add a DBIC Model
@@ -131,8 +131,8 @@ C<lib/MyApp/Schema/Result/User.pm>:
  extends 'DBIx::Class::Core';
  __PACKAGE__->table('user');
  __PACKAGE__->add_columns(
-	id => { is_auto_increment => 1, data_type => 'integer' },
-	qw(email first last)
+    id => { is_auto_increment => 1, data_type => 'integer' },
+    qw(email first last)
  );
  __PACKAGE__->set_primary_key('id');
  1;
@@ -148,28 +148,28 @@ C<MyApp::Model::DBIC>. Paste the following in C<lib/MyApp/Model/DBIC.pm>:
  # which means that the database is reset
  # with every start of the application
  __PACKAGE__->config({
-	schema_class => 'MyApp::Schema',
-	connect_info => ['dbi:SQLite:dbname=:memory:']
+    schema_class => 'MyApp::Schema',
+    connect_info => ['dbi:SQLite:dbname=:memory:']
  });
  
  # this initializes the empty sqlite database 
  # and inserts one record
  after BUILD => sub {
-	my $self = shift;
-	my $schema = $self->schema;
-	$schema->deploy;
-	$schema->resultset('User')->create({
-	    email => 'onken@netcubed.de', 
-	    first => 'Moritz', 
-	    last => 'Onken'
-	});
+    my $self = shift;
+    my $schema = $self->schema;
+    $schema->deploy;
+    $schema->resultset('User')->create({
+        email => 'onken@netcubed.de', 
+        first => 'Moritz', 
+        last => 'Onken'
+    });
  };
  
  1;
 
 =head1 AUTHOR
 
-  Moritz Onken <onken@netcubed.de>
+Moritz Onken <onken@netcubed.de>
 
 =head1 COPYRIGHT AND LICENSE
 

@@ -9,7 +9,7 @@
 #
 package CatalystX::Controller::ExtJS::REST;
 BEGIN {
-  $CatalystX::Controller::ExtJS::REST::VERSION = '1.101670';
+  $CatalystX::Controller::ExtJS::REST::VERSION = '1.101700';
 }
 # ABSTRACT: RESTful interface to dbic objects
 
@@ -539,7 +539,7 @@ CatalystX::Controller::ExtJS::REST - RESTful interface to dbic objects
 
 =head1 VERSION
 
-version 1.101670
+version 1.101700
 
 =head1 SYNOPSIS
 

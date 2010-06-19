@@ -9,7 +9,7 @@
 #
 package CatalystX::Action::ExtJS::Serialize;
 BEGIN {
-  $CatalystX::Action::ExtJS::Serialize::VERSION = '1.101670';
+  $CatalystX::Action::ExtJS::Serialize::VERSION = '1.101700';
 }
 # ABSTRACT: Handle responses from uploads
 use strict;
@@ -41,7 +41,7 @@ CatalystX::Action::ExtJS::Serialize - Handle responses from uploads
 
 =head1 VERSION
 
-version 1.101670
+version 1.101700
 
 =head1 PUBLIC METHODS
 

@@ -9,7 +9,7 @@
 #
 package CatalystX::Controller::ExtJS::Direct::API;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::API::VERSION = '1.101670';
+  $CatalystX::Controller::ExtJS::Direct::API::VERSION = '1.101700';
 }
 # ABSTRACT: API and router controller for Ext.Direct
 use Moose;
@@ -190,7 +190,7 @@ CatalystX::Controller::ExtJS::Direct::API - API and router controller for Ext.Di
 
 =head1 VERSION
 
-version 1.101670
+version 1.101700
 
 =head1 ACTIONS
 

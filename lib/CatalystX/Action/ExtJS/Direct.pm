@@ -9,7 +9,7 @@
 #
 package CatalystX::Action::ExtJS::Direct;
 BEGIN {
-  $CatalystX::Action::ExtJS::Direct::VERSION = '1.101700';
+  $CatalystX::Action::ExtJS::Direct::VERSION = '1.110000';
 }
 # ABSTRACT: Placeholder
 use Moose;
@@ -25,7 +25,7 @@ CatalystX::Action::ExtJS::Direct - Placeholder
 
 =head1 VERSION
 
-version 1.101700
+version 1.110000
 
 =head1 AUTHOR
 

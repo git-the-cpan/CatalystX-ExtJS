@@ -9,7 +9,7 @@
 #
 package CatalystX::Action::ExtJS::REST;
 BEGIN {
-  $CatalystX::Action::ExtJS::REST::VERSION = '1.101700';
+  $CatalystX::Action::ExtJS::REST::VERSION = '1.110000';
 }
 # ABSTRACT: Construct a new request class
 use Moose;
@@ -55,7 +55,7 @@ CatalystX::Action::ExtJS::REST - Construct a new request class
 
 =head1 VERSION
 
-version 1.101700
+version 1.110000
 
 =head1 AUTHOR
 

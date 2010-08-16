@@ -29,7 +29,7 @@ build_requires:
 configure_requires:
   Module::Build: 0.3601
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.101612, CPAN::Meta::Converter version 2.101610'
+generated_by: 'Dist::Zilla version 4.102221, CPAN::Meta::Converter version 2.101610'
 license: bsd
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -42,55 +42,55 @@ no_index:
 provides:
   CatalystX::Action::ExtJS::Deserialize:
     file: lib/CatalystX/Action/ExtJS/Deserialize.pm
-    version: 1.101700
+    version: 1.110000
   CatalystX::Action::ExtJS::Direct:
     file: lib/CatalystX/Action/ExtJS/Direct.pm
-    version: 1.101700
+    version: 1.110000
   CatalystX::Action::ExtJS::REST:
     file: lib/CatalystX/Action/ExtJS/REST.pm
-    version: 1.101700
+    version: 1.110000
   CatalystX::Action::ExtJS::Serialize:
     file: lib/CatalystX/Action/ExtJS/Serialize.pm
-    version: 1.101700
+    version: 1.110000
   CatalystX::Controller::ExtJS::Direct:
     file: lib/CatalystX/Controller/ExtJS/Direct.pm
-    version: 1.101700
+    version: 1.110000
   CatalystX::Controller::ExtJS::Direct::API:
     file: lib/CatalystX/Controller/ExtJS/Direct/API.pm
-    version: 1.101700
+    version: 1.110000
   CatalystX::Controller::ExtJS::Direct::Route:
     file: lib/CatalystX/Controller/ExtJS/Direct/Route.pm
-    version: 1.101700
+    version: 1.110000
   CatalystX::Controller::ExtJS::Direct::Route::Chained:
     file: lib/CatalystX/Controller/ExtJS/Direct/Route.pm
-    version: 1.101700
+    version: 1.110000
   CatalystX::Controller::ExtJS::Direct::Route::Factory:
     file: lib/CatalystX/Controller/ExtJS/Direct/Route.pm
-    version: 1.101700
+    version: 1.110000
   CatalystX::Controller::ExtJS::Direct::Route::REST:
     file: lib/CatalystX/Controller/ExtJS/Direct/Route.pm
-    version: 1.101700
+    version: 1.110000
   CatalystX::Controller::ExtJS::Direct::Route::REST::ExtJS:
     file: lib/CatalystX/Controller/ExtJS/Direct/Route.pm
-    version: 1.101700
+    version: 1.110000
   CatalystX::Controller::ExtJS::ImageChooser:
     file: lib/CatalystX/Controller/ExtJS/ImageChooser.pm
-    version: 1.101700
+    version: 1.110000
   CatalystX::Controller::ExtJS::REST:
     file: lib/CatalystX/Controller/ExtJS/REST.pm
-    version: 1.101700
+    version: 1.110000
   CatalystX::ExtJS:
     file: lib/CatalystX/ExtJS.pm
-    version: 1.101700
+    version: 1.110000
   CatalystX::ExtJS::Tutorial:
     file: lib/CatalystX/ExtJS/Tutorial.pm
-    version: 1.101700
+    version: 1.110000
   CatalystX::ExtJS::Tutorial::Direct:
     file: lib/CatalystX/ExtJS/Tutorial/Direct.pm
-    version: 1.101700
+    version: 1.110000
   CatalystX::TraitFor::Request::ExtJS:
     file: lib/CatalystX/TraitFor/Request/ExtJS.pm
-    version: 1.101700
+    version: 1.110000
 requires:
   Carp: 0
   Catalyst::Action: 0
@@ -123,173 +123,169 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=CatalystX-ExtJS
   homepage: http://search.cpan.org/dist/CatalystX-ExtJS/
   repository: http://github.com/monken/catalystx-extjs
-version: 1.101700
+version: 1.110000
 x_Dist_Zilla:
   plugins:
     -
-      class: Dist::Zilla::Plugin::AutoVersion
-      name: '@JQUELIN/AutoVersion'
-      version: 4.101612
-    -
       class: Dist::Zilla::Plugin::GatherDir
-      name: '@JQUELIN/GatherDir'
-      version: 4.101612
+      name: '@Filter/GatherDir'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::CompileTests
-      name: '@JQUELIN/CompileTests'
+      name: '@Filter/CompileTests'
       version: 1.101600
     -
       class: Dist::Zilla::Plugin::CriticTests
-      name: '@JQUELIN/CriticTests'
+      name: '@Filter/CriticTests'
       version: 1.100140
     -
       class: Dist::Zilla::Plugin::HasVersionTests
-      name: '@JQUELIN/HasVersionTests'
+      name: '@Filter/HasVersionTests'
       version: 1.101420
     -
       class: Dist::Zilla::Plugin::KwaliteeTests
-      name: '@JQUELIN/KwaliteeTests'
+      name: '@Filter/KwaliteeTests'
       version: 1.101420
     -
       class: Dist::Zilla::Plugin::MetaTests
-      name: '@JQUELIN/MetaTests'
-      version: 4.101612
+      name: '@Filter/MetaTests'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::MinimumVersionTests
-      name: '@JQUELIN/MinimumVersionTests'
+      name: '@Filter/MinimumVersionTests'
       version: 1.101421
     -
       class: Dist::Zilla::Plugin::PodCoverageTests
-      name: '@JQUELIN/PodCoverageTests'
-      version: 4.101612
+      name: '@Filter/PodCoverageTests'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::PodSyntaxTests
-      name: '@JQUELIN/PodSyntaxTests'
-      version: 4.101612
+      name: '@Filter/PodSyntaxTests'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::PortabilityTests
-      name: '@JQUELIN/PortabilityTests'
+      name: '@Filter/PortabilityTests'
       version: 1.101420
     -
       class: Dist::Zilla::Plugin::ReportVersions
-      name: '@JQUELIN/ReportVersions'
+      name: '@Filter/ReportVersions'
       version: 1.101600
     -
       class: Dist::Zilla::Plugin::UnusedVarsTests
-      name: '@JQUELIN/UnusedVarsTests'
+      name: '@Filter/UnusedVarsTests'
       version: 1.100860
     -
       class: Dist::Zilla::Plugin::PruneCruft
-      name: '@JQUELIN/PruneCruft'
-      version: 4.101612
+      name: '@Filter/PruneCruft'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::ManifestSkip
-      name: '@JQUELIN/ManifestSkip'
-      version: 4.101612
+      name: '@Filter/ManifestSkip'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::AutoPrereq
-      name: '@JQUELIN/AutoPrereq'
-      version: 4.101612
+      name: '@Filter/AutoPrereq'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::ExtraTests
-      name: '@JQUELIN/ExtraTests'
-      version: 4.101612
+      name: '@Filter/ExtraTests'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::NextRelease
-      name: '@JQUELIN/NextRelease'
-      version: 4.101612
+      name: '@Filter/NextRelease'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::PkgVersion
-      name: '@JQUELIN/PkgVersion'
-      version: 4.101612
+      name: '@Filter/PkgVersion'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::PodWeaver
-      name: '@JQUELIN/PodWeaver'
+      name: '@Filter/PodWeaver'
       version: 3.100710
     -
       class: Dist::Zilla::Plugin::Prepender
-      name: '@JQUELIN/Prepender'
+      name: '@Filter/Prepender'
       version: 1.101590
     -
       class: Dist::Zilla::Plugin::ExecDir
-      name: '@JQUELIN/ExecDir'
-      version: 4.101612
+      name: '@Filter/ExecDir'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::ShareDir
-      name: '@JQUELIN/ShareDir'
-      version: 4.101612
+      name: '@Filter/ShareDir'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::Bugtracker
-      name: '@JQUELIN/Bugtracker'
+      name: '@Filter/Bugtracker'
       version: 1.101490
     -
       class: Dist::Zilla::Plugin::Homepage
-      name: '@JQUELIN/Homepage'
+      name: '@Filter/Homepage'
       version: 1.101420
     -
       class: Dist::Zilla::Plugin::Repository
-      name: '@JQUELIN/Repository'
+      name: '@Filter/Repository'
       version: 0.13
     -
       class: Dist::Zilla::Plugin::MetaProvides::Package
-      name: '@JQUELIN/MetaProvides::Package'
+      name: '@Filter/MetaProvides::Package'
       version: 1.10027802
     -
       class: Dist::Zilla::Plugin::MetaConfig
-      name: '@JQUELIN/MetaConfig'
-      version: 4.101612
+      name: '@Filter/MetaConfig'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::License
-      name: '@JQUELIN/License'
-      version: 4.101612
+      name: '@Filter/License'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::MetaYAML
-      name: '@JQUELIN/MetaYAML'
-      version: 4.101612
+      name: '@Filter/MetaYAML'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::ModuleBuild
-      name: '@JQUELIN/ModuleBuild'
-      version: 4.101612
+      name: '@Filter/ModuleBuild'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::Readme
-      name: '@JQUELIN/Readme'
-      version: 4.101612
+      name: '@Filter/Readme'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::Manifest
-      name: '@JQUELIN/Manifest'
-      version: 4.101612
+      name: '@Filter/Manifest'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::CheckChangeLog
-      name: '@JQUELIN/CheckChangeLog'
+      name: '@Filter/CheckChangeLog'
       version: 0.01
     -
       class: Dist::Zilla::Plugin::UploadToCPAN
-      name: '@JQUELIN/UploadToCPAN'
-      version: 4.101612
+      name: '@Filter/UploadToCPAN'
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::Git::Check
-      name: '@JQUELIN/Git/Check'
+      name: '@Filter/Git/Check'
       version: 1.101330
     -
       class: Dist::Zilla::Plugin::Git::Commit
-      name: '@JQUELIN/Git/Commit'
+      name: '@Filter/Git/Commit'
       version: 1.101330
     -
       class: Dist::Zilla::Plugin::Git::Tag
-      name: '@JQUELIN/Git/Tag'
+      name: '@Filter/Git/Tag'
       version: 1.101330
     -
       class: Dist::Zilla::Plugin::Git::Push
-      name: '@JQUELIN/Git/Push'
+      name: '@Filter/Git/Push'
       version: 1.101330
     -
       class: Dist::Zilla::Plugin::Prereq
       config:
-        Dist::Zilla::Plugin::Prereq:
+        Dist::Zilla::Plugin::Prereqs:
           phase: runtime
           type: requires
       name: Prereq
-      version: 4.101612
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::MetaNoIndex
       name: MetaNoIndex
@@ -297,21 +293,21 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
-      version: 4.101612
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':TestFiles'
-      version: 4.101612
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ExecFiles'
-      version: 4.101612
+      version: 4.102221
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ShareFiles'
-      version: 4.101612
+      version: 4.102221
   zilla:
-    class: Dist::Zilla
+    class: Dist::Zilla::Dist::Builder
     config:
       is_trial: 0
-    version: 4.101612
+    version: 4.102221

@@ -9,7 +9,7 @@
 #
 package CatalystX::Controller::ExtJS::Direct;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::VERSION = '1.110000';
+  $CatalystX::Controller::ExtJS::Direct::VERSION = '1.120000';
 }
 # ABSTRACT: Enable Ext.Direct in Catalyst controllers
 
@@ -30,7 +30,7 @@ CatalystX::Controller::ExtJS::Direct - Enable Ext.Direct in Catalyst controllers
 
 =head1 VERSION
 
-version 1.110000
+version 1.120000
 
 =head1 SYNOPSIS
 

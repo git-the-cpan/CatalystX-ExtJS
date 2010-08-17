@@ -9,7 +9,7 @@
 #
 package CatalystX::ExtJS::Tutorial;
 BEGIN {
-  $CatalystX::ExtJS::Tutorial::VERSION = '1.110000';
+  $CatalystX::ExtJS::Tutorial::VERSION = '1.120000';
 }
 #ABSTRACT: Introduction to CatalystX::ExtJS
 1;
@@ -23,7 +23,7 @@ CatalystX::ExtJS::Tutorial - Introduction to CatalystX::ExtJS
 
 =head1 VERSION
 
-version 1.110000
+version 1.120000
 
 =head1 INTRODUCTION
 

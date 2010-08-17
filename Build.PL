@@ -39,7 +39,7 @@ my %module_build_args = (
     'Moritz Onken <onken@netcubed.de>'
   ],
   'dist_name' => 'CatalystX-ExtJS',
-  'dist_version' => '1.110000',
+  'dist_version' => '1.120000',
   'license' => 'bsd',
   'module_name' => 'CatalystX::ExtJS',
   'recommends' => {},
@@ -63,6 +63,7 @@ my %module_build_args = (
     'HTML::FormFu::Model::DBIC' => '0.06',
     'JSON::Any' => '0',
     'JSON::XS' => '0',
+    'JavaScript::Dumper' => '0.011',
     'Lingua::EN::Inflect' => '0',
     'List::Util' => '0',
     'Moose' => '1.06',

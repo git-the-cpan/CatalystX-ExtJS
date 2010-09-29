@@ -9,7 +9,7 @@
 #
 package CatalystX::Controller::ExtJS::Direct::API;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::API::VERSION = '1.120000';
+  $CatalystX::Controller::ExtJS::Direct::API::VERSION = '1.122000';
 }
 # ABSTRACT: API and router controller for Ext.Direct
 use Moose;
@@ -24,9 +24,10 @@ __PACKAGE__->config(
     
     action => {
         end    => { ActionClass => '+CatalystX::Action::ExtJS::Serialize' },
+        begin  => { ActionClass => '+CatalystX::Action::ExtJS::Deserialize' },
         index  => { Path        => undef },
         router => { Path        => 'router' },
-        src => { Local => undef },
+        src    => { Local => undef },
     },
     
     default => 'application/json'
@@ -131,7 +132,8 @@ sub router {
     REQUESTS:
     foreach my $req (@requests) {
         $req->{data} = [$req->{data}] if(ref $req->{data} ne "ARRAY");
-
+        $c->stash->{upload} = 1 if ( $req->{upload} );
+        
         my $route = $routes->{ $req->{action} }->{ $req->{method} };
         my $params = @{$req->{data}} && ref $req->{data}->[-1] eq 'HASH' ? $req->{data}->[-1] : undef;
         my $body;
@@ -163,6 +165,7 @@ sub router {
                     $msg = "$@".$c->response->body;
                 }
                 push(@res, { type => 'exception', tid => $req->{tid}, message => $msg });
+                $c->log->debug($msg) if($c->debug);
                 next REQUESTS;
             };
             
@@ -171,7 +174,6 @@ sub router {
         }
 
         my $res = { map { $_ => $req->{$_} } qw(action method tid type) };
-        $c->stash->{upload} = 1 if ( $req->{upload} );
         push( @res, { %$res, result => $body } );
 
     }
@@ -196,7 +198,7 @@ CatalystX::Controller::ExtJS::Direct::API - API and router controller for Ext.Di
 
 =head1 VERSION
 
-version 1.120000
+version 1.122000
 
 =head1 ACTIONS
 

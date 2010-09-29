@@ -9,7 +9,7 @@
 #
 package CatalystX::Action::ExtJS::Deserialize;
 BEGIN {
-  $CatalystX::Action::ExtJS::Deserialize::VERSION = '1.120000';
+  $CatalystX::Action::ExtJS::Deserialize::VERSION = '1.122000';
 }
 # ABSTRACT: Skip deserialization for uploads
 use strict;
@@ -19,9 +19,10 @@ use base 'Catalyst::Action::Deserialize';
 
 sub execute {
     my ( $self, $controller, $c ) = @_;
-
+    
     if (   $c->req->is_ext_upload )
     {
+        unshift(@{$c->req->accepted_content_types}, 'application/json');
         return 1;
     }
     else {
@@ -41,7 +42,7 @@ CatalystX::Action::ExtJS::Deserialize - Skip deserialization for uploads
 
 =head1 VERSION
 
-version 1.120000
+version 1.122000
 
 =head1 PUBLIC METHODS
 

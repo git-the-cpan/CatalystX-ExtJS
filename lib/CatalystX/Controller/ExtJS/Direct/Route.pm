@@ -9,7 +9,7 @@
 #
 package CatalystX::Controller::ExtJS::Direct::Route;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::VERSION = '1.120000';
+  $CatalystX::Controller::ExtJS::Direct::Route::VERSION = '1.122000';
 }
 #ABSTRACT: Ext.Direct route object
 use Moose;
@@ -18,6 +18,7 @@ has 'arguments' => ( is => 'rw', isa => 'Int', lazy_build => 1 );
 has 'action'     => ( is => 'ro', required   => 1 );
 has 'name'       => ( is => 'rw', lazy_build => 1 );
 has 'dispatcher' => ( is => 'rw', weak_ref   => 1 );
+has 'form_handler' => ( is => 'rw', default => 0 );
 
 sub _build_name {
     my ($self) = @_;
@@ -31,7 +32,8 @@ sub _build_arguments {
 
 sub build_api {
     my ($self) = @_;
-    return { name => $self->name, len => $self->arguments + 0 };
+    my $fh = $self->form_handler || exists $self->action->attributes->{FormHandler};
+    return { name => $self->name, len => $self->arguments + 0, $fh ? ( formHandler => \1 ) : () };
 }
 
 sub build_url {
@@ -55,7 +57,7 @@ sub prepare_request {
 
 package CatalystX::Controller::ExtJS::Direct::Route::Chained;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::Chained::VERSION = '1.120000';
+  $CatalystX::Controller::ExtJS::Direct::Route::Chained::VERSION = '1.122000';
 }
 use Moose::Role;
 
@@ -95,7 +97,7 @@ sub build_url {
 
 package CatalystX::Controller::ExtJS::Direct::Route::REST;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::REST::VERSION = '1.120000';
+  $CatalystX::Controller::ExtJS::Direct::Route::REST::VERSION = '1.122000';
 }
 use Moose::Role;
 
@@ -109,7 +111,7 @@ has 'crud_methods' => (
             create  => 'POST',
             update  => 'PUT',
             read    => 'GET',
-            destroy => 'DELETE'
+            destroy => 'DELETE',
         };
     }
 );
@@ -132,6 +134,8 @@ sub build {
     foreach my $action (qw(create read update destroy)) {
         push( @routes, $class->new( { %$args, crud_action => $action } ) );
     }
+    push( @routes, 
+        CatalystX::Controller::ExtJS::Direct::Route->new( { %$args, name => 'submit', form_handler => 1 } ) );
     return @routes;
 }
 
@@ -173,13 +177,13 @@ sub prepare_request {
 
 package CatalystX::Controller::ExtJS::Direct::Route::REST::ExtJS;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::REST::ExtJS::VERSION = '1.120000';
+  $CatalystX::Controller::ExtJS::Direct::Route::REST::ExtJS::VERSION = '1.122000';
 }
 use Moose::Role;
 
 package CatalystX::Controller::ExtJS::Direct::Route::Factory;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::Factory::VERSION = '1.120000';
+  $CatalystX::Controller::ExtJS::Direct::Route::Factory::VERSION = '1.122000';
 }
 
 sub build {
@@ -223,7 +227,7 @@ CatalystX::Controller::ExtJS::Direct::Route - Ext.Direct route object
 
 =head1 VERSION
 
-version 1.120000
+version 1.122000
 
 =head1 AUTHOR
 

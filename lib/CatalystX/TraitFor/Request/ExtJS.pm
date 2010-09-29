@@ -9,7 +9,7 @@
 #
 package CatalystX::TraitFor::Request::ExtJS;
 BEGIN {
-  $CatalystX::TraitFor::Request::ExtJS::VERSION = '1.120000';
+  $CatalystX::TraitFor::Request::ExtJS::VERSION = '1.122000';
 }
 # ABSTRACT: Sets the request method via a query parameter
 use Moose::Role;
@@ -17,12 +17,13 @@ use Moose::Role;
 use namespace::autoclean;
 use JSON::XS;
 
-has 'is_ext_upload' => ( isa => 'Bool', is => 'rw', lazy_build => 1 );
+#has 'is_ext_upload' => ( isa => 'Bool', is => 'rw', lazy_build => 1 );
 
-sub _build_is_ext_upload {
+sub is_ext_upload {
     my ($self) = @_;
     return $self->header('Content-Type')
-      && $self->header('Content-Type') =~ /^multipart\/form-data/;
+      && $self->header('Content-Type') =~ /^multipart\/form-data/
+      && ( !$self->{content_type} || $self->{content_type} ne 'application/json');
 }
 
 around 'method' => sub {
@@ -45,7 +46,7 @@ CatalystX::TraitFor::Request::ExtJS - Sets the request method via a query parame
 
 =head1 VERSION
 
-version 1.120000
+version 1.122000
 
 =head1 METHODS
 

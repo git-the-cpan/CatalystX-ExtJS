@@ -9,7 +9,7 @@
 #
 package CatalystX::ExtJS::Tutorial::Direct;
 BEGIN {
-  $CatalystX::ExtJS::Tutorial::Direct::VERSION = '1.122000';
+  $CatalystX::ExtJS::Tutorial::Direct::VERSION = '1.123000';
 }
 #ABSTRACT: Introduction to CatalystX::ExtJS::Direct
 1;
@@ -23,7 +23,7 @@ CatalystX::ExtJS::Tutorial::Direct - Introduction to CatalystX::ExtJS::Direct
 
 =head1 VERSION
 
-version 1.122000
+version 1.123000
 
 =head1 INTRODUCTION
 

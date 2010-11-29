@@ -9,7 +9,7 @@
 #
 package CatalystX::Controller::ExtJS::REST;
 BEGIN {
-  $CatalystX::Controller::ExtJS::REST::VERSION = '1.122000';
+  $CatalystX::Controller::ExtJS::REST::VERSION = '1.123000';
 }
 # ABSTRACT: RESTful interface to dbic objects
 
@@ -165,8 +165,8 @@ sub _build_default_resultset {
     my $prefix;
     
     # Copied from Catalyst::Utils
-    if($class =~ /^.+?::([MVC]|Model|View|Controller)::(.+)$/ ) {
-        $prefix = $2;
+    if($class =~ /^.+?::([MVC]|Model|View|Controller)::(API::)?(.+)$/ ) {
+        $prefix = $3;
     }
     return $prefix;
 }
@@ -555,7 +555,7 @@ CatalystX::Controller::ExtJS::REST - RESTful interface to dbic objects
 
 =head1 VERSION
 
-version 1.122000
+version 1.123000
 
 =head1 SYNOPSIS
 

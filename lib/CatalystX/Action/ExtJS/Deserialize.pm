@@ -9,7 +9,7 @@
 #
 package CatalystX::Action::ExtJS::Deserialize;
 BEGIN {
-  $CatalystX::Action::ExtJS::Deserialize::VERSION = '1.122000';
+  $CatalystX::Action::ExtJS::Deserialize::VERSION = '1.123000';
 }
 # ABSTRACT: Skip deserialization for uploads
 use strict;
@@ -42,7 +42,7 @@ CatalystX::Action::ExtJS::Deserialize - Skip deserialization for uploads
 
 =head1 VERSION
 
-version 1.122000
+version 1.123000
 
 =head1 PUBLIC METHODS
 

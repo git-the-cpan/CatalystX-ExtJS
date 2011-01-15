@@ -313,8 +313,7 @@ lib/CatalystX/ExtJS/Tutorial.pm
 lib/CatalystX/ExtJS/Tutorial/Direct.pm
 lib/CatalystX/TraitFor/Request/ExtJS.pm
 t/00-compile.t
-t/000-report-versions.t
-t/author-critic.t
+t/000-report-versions-tiny.t
 t/direct/api.t
 t/direct/json.t
 t/direct/router.t
@@ -342,14 +341,12 @@ t/lib/TestSchema/Result/User.pm
 t/lib/TestSchema/ResultSet/FindOrDefault.pm
 t/lib/TestSchema/ResultSet/User.pm
 t/pod.t
-t/release-distmeta.t
 t/release-has-version.t
 t/release-kwalitee.t
 t/release-minimum-version.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
 t/release-portability.t
-t/release-unused-vars.t
 t/rest/findordefault.t
 t/rest/for_browser.t
 t/rest/skip_end.t

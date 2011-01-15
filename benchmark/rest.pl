@@ -1,7 +1,7 @@
 #
 # This file is part of CatalystX-ExtJS
 #
-# This software is Copyright (c) 2010 by Moritz Onken.
+# This software is Copyright (c) 2011 by Moritz Onken.
 #
 # This is free software, licensed under:
 #
@@ -45,5 +45,20 @@ ok($json = JSON::decode_json($mech->content), 'response is JSON response');
 
 is($json->{results}, 1, 'one results');
 
+diag "Getting one user";
 
 timethis(250, sub { $mech->get('/user/1', undef, 'get user 1') });
+
+diag "Creating 250 users";
+
+timethis(250, sub { $mech->request(POST '/user', [name => 'bar', password => 'foo']); } );
+
+diag "Get list of 250 users";
+
+timethis(10, sub { $mech->get('/users', undef, 'request list of users'); } );
+
+diag "Get list of 250 users";
+
+timethis(10, sub { $mech->get('/users/hri', undef, 'request list of users'); } );
+
+print $mech->content;

@@ -1,7 +1,7 @@
 #
 # This file is part of CatalystX-ExtJS
 #
-# This software is Copyright (c) 2010 by Moritz Onken.
+# This software is Copyright (c) 2011 by Moritz Onken.
 #
 # This is free software, licensed under:
 #
@@ -19,6 +19,10 @@ sub extjs_rest_user {
     my ($self, $c) = @_;
     return $self unless(my $ending = $c->req->params->{ending});
     return $self->search({ id => { LIKE => '%'.$ending }  });
+}
+
+sub hri {
+    shift->search( undef, { result_class => 'DBIx::Class::ResultClass::HashRefInflator' } );
 }
 
 sub none {

@@ -1,7 +1,7 @@
 #
 # This file is part of CatalystX-ExtJS
 #
-# This software is Copyright (c) 2010 by Moritz Onken.
+# This software is Copyright (c) 2011 by Moritz Onken.
 #
 # This is free software, licensed under:
 #
@@ -9,7 +9,7 @@
 #
 package CatalystX::Controller::ExtJS::REST;
 BEGIN {
-  $CatalystX::Controller::ExtJS::REST::VERSION = '1.123000';
+  $CatalystX::Controller::ExtJS::REST::VERSION = '1.124000';
 }
 # ABSTRACT: RESTful interface to dbic objects
 
@@ -425,8 +425,6 @@ sub object_GET {
     my ( $self, $c ) = @_;
     my $form = $c->stash->{form};
 
-    $form->process( $c->req );
-    
     if($c->stash->{object}) {
         $self->status_ok( $c, entity => $form->form_data( $c->stash->{object} ) );
     } else {
@@ -440,7 +438,7 @@ sub object_DELETE {
         $c->stash->{object}->delete;
         $self->status_ok( $c, entity => { success => \1, data => {}, message => "Object has been deleted" } );
     } else {
-        $self->status_not_found($c, success => \0, data => {}, message => 'Object could not be found.');
+        $self->status_not_found($c, message => 'Object could not be found.');
     }
 }
 
@@ -555,7 +553,7 @@ CatalystX::Controller::ExtJS::REST - RESTful interface to dbic objects
 
 =head1 VERSION
 
-version 1.123000
+version 1.124000
 
 =head1 SYNOPSIS
 
@@ -972,7 +970,7 @@ Moritz Onken <onken@netcubed.de>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2010 by Moritz Onken.
+This software is Copyright (c) 2011 by Moritz Onken.
 
 This is free software, licensed under:
 

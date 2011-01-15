@@ -1,7 +1,7 @@
 #
 # This file is part of CatalystX-ExtJS
 #
-# This software is Copyright (c) 2010 by Moritz Onken.
+# This software is Copyright (c) 2011 by Moritz Onken.
 #
 # This is free software, licensed under:
 #
@@ -9,7 +9,7 @@
 #
 package CatalystX::Action::ExtJS::Serialize;
 BEGIN {
-  $CatalystX::Action::ExtJS::Serialize::VERSION = '1.123000';
+  $CatalystX::Action::ExtJS::Serialize::VERSION = '1.124000';
 }
 # ABSTRACT: Handle responses from uploads
 use strict;
@@ -41,7 +41,7 @@ CatalystX::Action::ExtJS::Serialize - Handle responses from uploads
 
 =head1 VERSION
 
-version 1.123000
+version 1.124000
 
 =head1 PUBLIC METHODS
 
@@ -58,7 +58,7 @@ Moritz Onken <onken@netcubed.de>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2010 by Moritz Onken.
+This software is Copyright (c) 2011 by Moritz Onken.
 
 This is free software, licensed under:
 

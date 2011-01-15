@@ -16,7 +16,6 @@ my %module_build_args = (
     'DBIx::Class' => '0',
     'DBIx::Class::ResultSet' => '0',
     'DBIx::Class::Schema' => '0',
-    'English' => '0',
     'File::Find' => '0',
     'File::Spec' => '0',
     'File::Temp' => '0',
@@ -27,9 +26,8 @@ my %module_build_args = (
     'Module::Build' => '0.3601',
     'Path::Class::File' => '0',
     'Pod::Usage' => '0',
-    'Test::More' => '0.94',
-    'Test::WWW::Mechanize::Catalyst' => '0',
-    'perl' => '5.004'
+    'Test::More' => '0.88',
+    'Test::WWW::Mechanize::Catalyst' => '0'
   },
   'configure_requires' => {
     'Module::Build' => '0.3601'
@@ -39,7 +37,7 @@ my %module_build_args = (
     'Moritz Onken <onken@netcubed.de>'
   ],
   'dist_name' => 'CatalystX-ExtJS',
-  'dist_version' => '1.123000',
+  'dist_version' => '1.124000',
   'license' => 'bsd',
   'module_name' => 'CatalystX::ExtJS',
   'recommends' => {},

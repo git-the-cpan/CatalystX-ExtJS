@@ -1,7 +1,7 @@
 #
 # This file is part of CatalystX-ExtJS
 #
-# This software is Copyright (c) 2010 by Moritz Onken.
+# This software is Copyright (c) 2011 by Moritz Onken.
 #
 # This is free software, licensed under:
 #
@@ -9,7 +9,7 @@
 #
 package CatalystX::Action::ExtJS::REST;
 BEGIN {
-  $CatalystX::Action::ExtJS::REST::VERSION = '1.123000';
+  $CatalystX::Action::ExtJS::REST::VERSION = '1.124000';
 }
 # ABSTRACT: Construct a new request class
 use Moose;
@@ -55,7 +55,7 @@ CatalystX::Action::ExtJS::REST - Construct a new request class
 
 =head1 VERSION
 
-version 1.123000
+version 1.124000
 
 =head1 AUTHOR
 
@@ -63,7 +63,7 @@ Moritz Onken <onken@netcubed.de>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2010 by Moritz Onken.
+This software is Copyright (c) 2011 by Moritz Onken.
 
 This is free software, licensed under:
 

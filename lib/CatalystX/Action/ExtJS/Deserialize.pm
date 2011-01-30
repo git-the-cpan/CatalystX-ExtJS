@@ -9,13 +9,47 @@
 #
 package CatalystX::Action::ExtJS::Deserialize;
 BEGIN {
-  $CatalystX::Action::ExtJS::Deserialize::VERSION = '1.124000';
+  $CatalystX::Action::ExtJS::Deserialize::VERSION = '2.0.0'; # TRIAL
 }
 # ABSTRACT: Skip deserialization for uploads
 use strict;
 use warnings;
 
 use base 'Catalyst::Action::Deserialize';
+use Catalyst::Utils;
+use Carp;
+
+my @traits = qw(Catalyst::TraitFor::Request::REST CatalystX::TraitFor::Request::ExtJS);
+
+# not sure if this is the best place to mess with the request class
+
+sub new {
+    my $class    = shift;
+    my ($config) = @_;
+    $class->apply_request_trait(@_);
+    return $class->next::method(@_);
+}
+
+sub apply_request_trait {
+    my $class = shift;
+    my ($config) = @_;
+    my $app      = Catalyst::Utils::class2appclass( $config->{class} );
+    unless ( $app && $app->can('request_class') ) {
+        croak q(Couldn't set the request class. Use REST::ExtJS from your application classes only!);
+    }
+
+    my $req_class = $app->request_class;
+    
+    return if($req_class->does('Catalyst::TraitFor::Request::REST') && $req_class->does('CatalystX::TraitFor::Request::ExtJS'));
+
+    my $meta = $req_class->meta->create_anon_class(
+        superclasses => [$req_class],
+        roles        => [@traits],
+        cache        => 1
+    );
+    $meta->make_immutable;
+    $app->request_class( $meta->name );
+}
 
 sub execute {
     my ( $self, $controller, $c ) = @_;
@@ -42,7 +76,7 @@ CatalystX::Action::ExtJS::Deserialize - Skip deserialization for uploads
 
 =head1 VERSION
 
-version 1.124000
+version 2.0.0
 
 =head1 PUBLIC METHODS
 

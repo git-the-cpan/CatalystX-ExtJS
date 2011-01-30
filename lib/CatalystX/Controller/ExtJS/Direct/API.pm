@@ -9,7 +9,7 @@
 #
 package CatalystX::Controller::ExtJS::Direct::API;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::API::VERSION = '1.124000';
+  $CatalystX::Controller::ExtJS::Direct::API::VERSION = '2.0.0'; # TRIAL
 }
 # ABSTRACT: API and router controller for Ext.Direct
 use Moose;
@@ -17,6 +17,7 @@ extends qw(Catalyst::Controller::REST);
 use MooseX::MethodAttributes;
 
 use List::Util qw(first);
+use List::MoreUtils ();
 use JSON::Any;
 use CatalystX::Controller::ExtJS::Direct::Route;
 
@@ -46,7 +47,7 @@ sub index { }
 sub src {
     my ($self, $c) = @_;
     $c->res->content_type('application/javascript');
-    $c->res->body( 'Ext.app.REMOTING_API = ' . $self->encoded_api . ';' );
+    $c->res->body( 'Ext.app.REMOTING_API = ' . $self->encoded_api($c) . ';' );
 }
 
 sub _build_api {
@@ -86,7 +87,7 @@ sub _build_api {
 
 sub encoded_api {
     my ( $self, $c ) = @_;
-    return JSON::Any->new->to_json( $self->api );
+    return JSON::Any->new->to_json( $self->set_namespace( $self->api, $c ? $c->req->params->{namespace} : () ) );
 }
 
 sub router {
@@ -120,7 +121,7 @@ sub router {
             && exists $routes->{ $req->{action} }
             && exists $routes->{ $req->{action} }->{ $req->{method} } )
         {
-            $self->status_bad_request( $c, { message => sprintf('method %s in action %s does not exist', $req->{method}, $req->{action}) } );
+            $self->status_bad_request( $c, { message => sprintf('method %s in action %s does not exist', $req->{method} || '', $req->{action} || '') } );
             return;
         }
          my $route = $routes->{ $req->{action} }->{ $req->{method} };
@@ -158,14 +159,22 @@ sub router {
                 } else {
                     $body = $response->body;
                 }
+                
+                if(@{$c->error}) { 0 }
+                elsif($response->status >= 400) {
+                    $c->error($body);
+                    0;
+                } else { 1 } 
             } or do {
                 my $msg;
-                if(scalar @{ $c->error }) {
+                if(@{ $c->error } && List::MoreUtils::all { ref $_ } @{ $c->error }) {
+                    $msg = @{$c->error} == 1 ? $c->error->[0] : $c->error;
+                } elsif(scalar @{ $c->error }) {
                     $msg = join "\n", @{ $c->error };
                 } else {
-                    $msg = "$@".$c->response->body;
+                    $msg = join("\n", "$@", $c->response->body || ());
                 }
-                push(@res, { type => 'exception', tid => $req->{tid}, message => $msg });
+                push(@res, { type => 'exception', tid => $req->{tid}, message => $msg, status => $c->res->status });
                 $c->log->debug($msg) if($c->debug);
                 next REQUESTS;
             };
@@ -182,9 +191,15 @@ sub router {
 
 }
 
+sub set_namespace {
+    my ($self, $api, $namespace) = @_;
+    return $api unless($namespace && $namespace =~ /^\w+(\.\w+)?$/);
+    return {%$api, namespace => $namespace };
+}
+
 sub end {
     my ( $self, $c ) = @_;
-    $c->stash->{rest} ||= $self->api;
+    $c->stash->{rest} ||= $self->set_namespace( $self->api, $c->req->params->{namespace} );
 }
 
 1;
@@ -199,7 +214,17 @@ CatalystX::Controller::ExtJS::Direct::API - API and router controller for Ext.Di
 
 =head1 VERSION
 
-version 1.124000
+version 2.0.0
+
+=head1 SYNOPSIS
+
+ package MyApp::Controller::API;
+ use Moose;
+ extends 'CatalystX::Controller::ExtJS::Direct::API';
+ 1;
+
+ <script type="text/javascript" src="/api/src?namespace=MyApp.Direct"></script>
+ <script>Ext.Direct.addProvider(Ext.app.REMOTING_API);</script>
 
 =head1 ACTIONS
 
@@ -216,6 +241,13 @@ Example:
   1;
 
 The router is now available at C<< /api/callme >>.
+
+=head2 src
+
+Provides the API as JavaScript. Include this action in your web application as shown in the L</SYNOPSIS>.
+To set the namespace for the API, pass a C<namespace> query parameter:
+
+  <script type="text/javascript" src="/api/src?namespace=MyApp.Direct"></script>
 
 =head2 index
 

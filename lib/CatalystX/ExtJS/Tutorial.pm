@@ -9,7 +9,7 @@
 #
 package CatalystX::ExtJS::Tutorial;
 BEGIN {
-  $CatalystX::ExtJS::Tutorial::VERSION = '1.124000';
+  $CatalystX::ExtJS::Tutorial::VERSION = '2.0.0'; # TRIAL
 }
 #ABSTRACT: Introduction to CatalystX::ExtJS
 1;
@@ -23,7 +23,7 @@ CatalystX::ExtJS::Tutorial - Introduction to CatalystX::ExtJS
 
 =head1 VERSION
 
-version 1.124000
+version 2.0.0
 
 =head1 INTRODUCTION
 
@@ -73,20 +73,19 @@ the C<index> subroutine to:
 
  sub index :Path :Args(0) { }
 
-This removes the Catalyst welcome message and a request to </> will run
+This removes the Catalyst welcome message and a request to C</> will run
 the C<index> template (which we will create later) via the TT view. 
 
 =head2 Step 4: Add the C<index> Template
 
-Now it's time to build some HTML and JavaScript. First of all we need to
-extract the ExtJS sources to C<root/static/ext/>. Then we build the file C<root/src/index>:
+Now it's time to build some HTML and JavaScript. Add this to C<root/src/index>:
 
  <html>
  <head>
  <title>Ext.Direct and Catalyst</title>
- <link rel="stylesheet" type="text/css" href="/static/ext/resources/css/ext-all.css" />
- <script type="text/javascript" src="/static/ext/adapter/ext/ext-base.js"></script>
- <script type="text/javascript" src="/static/ext/ext-all-debug.js"></script>
+ <link rel="stylesheet" type="text/css" href="http://extjs.cachefly.net/ext-3.3.1/resources/css/ext-all.css" />
+ <script type="text/javascript" src="http://extjs.cachefly.net/ext-3.3.1/adapter/ext/ext-base.js"></script>
+ <script type="text/javascript" src="http://extjs.cachefly.net/ext-3.3.1/ext-all-debug.js"></script>
  </head>
  <body>Hello World!</body>
  </html>

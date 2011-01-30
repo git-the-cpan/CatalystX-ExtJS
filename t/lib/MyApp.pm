@@ -20,7 +20,8 @@ __PACKAGE__->config(
     'default_view' => 'TT'
 );
 
-__PACKAGE__->setup(qw(-Debug));
+__PACKAGE__->setup();
+__PACKAGE__->log->disable('error');
 
 
 1;

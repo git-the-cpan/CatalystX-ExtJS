@@ -9,7 +9,7 @@
 #
 package CatalystX::TraitFor::Request::ExtJS;
 BEGIN {
-  $CatalystX::TraitFor::Request::ExtJS::VERSION = '1.124000';
+  $CatalystX::TraitFor::Request::ExtJS::VERSION = '2.0.0'; # TRIAL
 }
 # ABSTRACT: Sets the request method via a query parameter
 use Moose::Role;
@@ -46,7 +46,7 @@ CatalystX::TraitFor::Request::ExtJS - Sets the request method via a query parame
 
 =head1 VERSION
 
-version 1.124000
+version 2.0.0
 
 =head1 METHODS
 

@@ -1,6 +1,6 @@
 -- 
 -- Created by SQL::Translator::Producer::SQLite
--- Created on Sat Jan 15 13:06:25 2011
+-- Created on Sun Jan 30 17:30:10 2011
 -- 
 
 BEGIN TRANSACTION;
@@ -29,7 +29,7 @@ CREATE TABLE skip_end (
 CREATE TABLE user (
   id INTEGER PRIMARY KEY NOT NULL,
   name character varying NOT NULL,
-  password character varying NOT NULL
+  password character varying
 );
 
 COMMIT;

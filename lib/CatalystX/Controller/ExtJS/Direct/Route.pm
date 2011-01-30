@@ -9,7 +9,7 @@
 #
 package CatalystX::Controller::ExtJS::Direct::Route;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::VERSION = '1.124000';
+  $CatalystX::Controller::ExtJS::Direct::Route::VERSION = '2.0.0'; # TRIAL
 }
 #ABSTRACT: Ext.Direct route object
 use Moose;
@@ -57,7 +57,7 @@ sub prepare_request {
 
 package CatalystX::Controller::ExtJS::Direct::Route::Chained;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::Chained::VERSION = '1.124000';
+  $CatalystX::Controller::ExtJS::Direct::Route::Chained::VERSION = '2.0.0'; # TRIAL
 }
 use Moose::Role;
 
@@ -97,7 +97,7 @@ sub build_url {
 
 package CatalystX::Controller::ExtJS::Direct::Route::REST;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::REST::VERSION = '1.124000';
+  $CatalystX::Controller::ExtJS::Direct::Route::REST::VERSION = '2.0.0'; # TRIAL
 }
 use Moose::Role;
 
@@ -161,14 +161,15 @@ sub prepare_request {
 		return $req;
 	}
 	my $read_or_destroy = $self->crud_action eq 'read' || $self->crud_action eq 'destroy';
-	my $data = $req->{data}->[-1];
+    my $create = $self->crud_action eq 'create';
+    my $data = $req->{data}->[-1];
 	if(ref $data eq 'HASH' && keys %$data == 1) {
 		my ($key) =  keys %$data;
 		if(ref $data->{$key} eq 'HASH' && !$read_or_destroy) {
 			$req->{data} = $data->{$key};
 		} elsif ( ref $data->{$key} eq 'ARRAY' ) {
 			return map { {%$req, data => $_} } @{$data->{$key}};
-		} elsif (!ref $data->{$key} || !$read_or_destroy) {
+		} elsif ((!ref $data->{$key} || !$read_or_destroy) && !$create) {
 			$req->{data} = $data->{$key};
 		}
 	}
@@ -177,13 +178,13 @@ sub prepare_request {
 
 package CatalystX::Controller::ExtJS::Direct::Route::REST::ExtJS;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::REST::ExtJS::VERSION = '1.124000';
+  $CatalystX::Controller::ExtJS::Direct::Route::REST::ExtJS::VERSION = '2.0.0'; # TRIAL
 }
 use Moose::Role;
 
 package CatalystX::Controller::ExtJS::Direct::Route::Factory;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::Factory::VERSION = '1.124000';
+  $CatalystX::Controller::ExtJS::Direct::Route::Factory::VERSION = '2.0.0'; # TRIAL
 }
 
 sub build {
@@ -227,7 +228,7 @@ CatalystX::Controller::ExtJS::Direct::Route - Ext.Direct route object
 
 =head1 VERSION
 
-version 1.124000
+version 2.0.0
 
 =head1 AUTHOR
 

@@ -9,7 +9,7 @@
 #
 package CatalystX::Controller::ExtJS::Direct::API;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::API::VERSION = '2.0.0'; # TRIAL
+  $CatalystX::Controller::ExtJS::Direct::API::VERSION = '2.0.0';
 }
 # ABSTRACT: API and router controller for Ext.Direct
 use Moose;
@@ -175,7 +175,7 @@ sub router {
                     $msg = join("\n", "$@", $c->response->body || ());
                 }
                 push(@res, { type => 'exception', tid => $req->{tid}, message => $msg, status => $c->res->status });
-                $c->log->debug($msg) if($c->debug);
+                $c->log->dump($msg) if($c->debug && !ref $msg);
                 next REQUESTS;
             };
             

@@ -9,7 +9,7 @@
 #
 package CatalystX::Action::ExtJS::Serialize;
 BEGIN {
-  $CatalystX::Action::ExtJS::Serialize::VERSION = '2.0.0'; # TRIAL
+  $CatalystX::Action::ExtJS::Serialize::VERSION = '2.0.0';
 }
 # ABSTRACT: Handle responses from uploads
 use strict;

@@ -9,7 +9,7 @@
 #
 package CatalystX::ExtJS;
 BEGIN {
-  $CatalystX::ExtJS::VERSION = '2.0.0'; # TRIAL
+  $CatalystX::ExtJS::VERSION = '2.0.0';
 }
 # ABSTRACT: Collection of modules for ExtJS
 1;

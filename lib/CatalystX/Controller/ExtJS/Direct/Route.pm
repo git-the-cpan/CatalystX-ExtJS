@@ -9,7 +9,7 @@
 #
 package CatalystX::Controller::ExtJS::Direct::Route;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::VERSION = '2.0.0'; # TRIAL
+  $CatalystX::Controller::ExtJS::Direct::Route::VERSION = '2.0.0';
 }
 #ABSTRACT: Ext.Direct route object
 use Moose;
@@ -57,7 +57,7 @@ sub prepare_request {
 
 package CatalystX::Controller::ExtJS::Direct::Route::Chained;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::Chained::VERSION = '2.0.0'; # TRIAL
+  $CatalystX::Controller::ExtJS::Direct::Route::Chained::VERSION = '2.0.0';
 }
 use Moose::Role;
 
@@ -97,7 +97,7 @@ sub build_url {
 
 package CatalystX::Controller::ExtJS::Direct::Route::REST;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::REST::VERSION = '2.0.0'; # TRIAL
+  $CatalystX::Controller::ExtJS::Direct::Route::REST::VERSION = '2.0.0';
 }
 use Moose::Role;
 
@@ -178,13 +178,13 @@ sub prepare_request {
 
 package CatalystX::Controller::ExtJS::Direct::Route::REST::ExtJS;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::REST::ExtJS::VERSION = '2.0.0'; # TRIAL
+  $CatalystX::Controller::ExtJS::Direct::Route::REST::ExtJS::VERSION = '2.0.0';
 }
 use Moose::Role;
 
 package CatalystX::Controller::ExtJS::Direct::Route::Factory;
 BEGIN {
-  $CatalystX::Controller::ExtJS::Direct::Route::Factory::VERSION = '2.0.0'; # TRIAL
+  $CatalystX::Controller::ExtJS::Direct::Route::Factory::VERSION = '2.0.0';
 }
 
 sub build {

@@ -9,7 +9,7 @@
 #
 package CatalystX::Action::ExtJS::Direct;
 BEGIN {
-  $CatalystX::Action::ExtJS::Direct::VERSION = '2.0.0'; # TRIAL
+  $CatalystX::Action::ExtJS::Direct::VERSION = '2.0.0';
 }
 # ABSTRACT: Placeholder
 use Moose;

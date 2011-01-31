@@ -9,7 +9,7 @@
 #
 package CatalystX::Controller::ExtJS::REST;
 BEGIN {
-  $CatalystX::Controller::ExtJS::REST::VERSION = '2.0.0'; # TRIAL
+  $CatalystX::Controller::ExtJS::REST::VERSION = '2.0.0';
 }
 # ABSTRACT: RESTful interface to dbic objects
 

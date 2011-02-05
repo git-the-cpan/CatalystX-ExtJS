@@ -3,27 +3,10 @@ abstract: 'Collection of modules for ExtJS'
 author:
   - 'Moritz Onken <onken@netcubed.de>'
 build_requires:
-  Catalyst: 0
-  Catalyst::Engine::HTTP: 0
-  Catalyst::Model::DBIC::Schema: 0
-  Catalyst::Request::REST::ForBrowsers: 0
-  Catalyst::View::JSON: 0
-  Catalyst::View::TT: 0
-  DBIx::Class: 0
-  DBIx::Class::ResultSet: 0
-  DBIx::Class::Schema: 0
   File::Find: 0
-  File::Spec: 0
   File::Temp: 0
-  FindBin: 0
-  Getopt::Long: 0
-  HTTP::Request::Common: 0
-  JSON: 0
   Module::Build: 0.3601
-  Path::Class::File: 0
-  Pod::Usage: 0
   Test::More: 0.88
-  Test::WWW::Mechanize::Catalyst: 0
 configure_requires:
   Module::Build: 0.3601
 dynamic_config: 0
@@ -38,94 +21,27 @@ no_index:
     - example
     - tutorial
 provides:
-  CatalystX::Action::ExtJS::Deserialize:
-    file: lib/CatalystX/Action/ExtJS/Deserialize.pm
-    version: v2.0.0
-  CatalystX::Action::ExtJS::Direct:
-    file: lib/CatalystX/Action/ExtJS/Direct.pm
-    version: v2.0.0
-  CatalystX::Action::ExtJS::REST:
-    file: lib/CatalystX/Action/ExtJS/REST.pm
-    version: v2.0.0
-  CatalystX::Action::ExtJS::Serialize:
-    file: lib/CatalystX/Action/ExtJS/Serialize.pm
-    version: v2.0.0
-  CatalystX::Controller::ExtJS::Direct:
-    file: lib/CatalystX/Controller/ExtJS/Direct.pm
-    version: v2.0.0
-  CatalystX::Controller::ExtJS::Direct::API:
-    file: lib/CatalystX/Controller/ExtJS/Direct/API.pm
-    version: v2.0.0
-  CatalystX::Controller::ExtJS::Direct::Route:
-    file: lib/CatalystX/Controller/ExtJS/Direct/Route.pm
-    version: v2.0.0
-  CatalystX::Controller::ExtJS::Direct::Route::Chained:
-    file: lib/CatalystX/Controller/ExtJS/Direct/Route.pm
-    version: v2.0.0
-  CatalystX::Controller::ExtJS::Direct::Route::Factory:
-    file: lib/CatalystX/Controller/ExtJS/Direct/Route.pm
-    version: v2.0.0
-  CatalystX::Controller::ExtJS::Direct::Route::REST:
-    file: lib/CatalystX/Controller/ExtJS/Direct/Route.pm
-    version: v2.0.0
-  CatalystX::Controller::ExtJS::Direct::Route::REST::ExtJS:
-    file: lib/CatalystX/Controller/ExtJS/Direct/Route.pm
-    version: v2.0.0
   CatalystX::Controller::ExtJS::ImageChooser:
     file: lib/CatalystX/Controller/ExtJS/ImageChooser.pm
-    version: v2.0.0
-  CatalystX::Controller::ExtJS::REST:
-    file: lib/CatalystX/Controller/ExtJS/REST.pm
-    version: v2.0.0
+    version: v2.1.0
   CatalystX::ExtJS:
     file: lib/CatalystX/ExtJS.pm
-    version: v2.0.0
+    version: v2.1.0
   CatalystX::ExtJS::Tutorial:
     file: lib/CatalystX/ExtJS/Tutorial.pm
-    version: v2.0.0
-  CatalystX::ExtJS::Tutorial::Direct:
-    file: lib/CatalystX/ExtJS/Tutorial/Direct.pm
-    version: v2.0.0
-  CatalystX::TraitFor::Request::ExtJS:
-    file: lib/CatalystX/TraitFor/Request/ExtJS.pm
-    version: v2.0.0
+    version: v2.1.0
 requires:
   Carp: 0
-  Catalyst::Action: 0
-  Catalyst::Action::Deserialize: 0
-  Catalyst::Action::REST: 0.88
-  Catalyst::Action::RenderView: 0
-  Catalyst::Action::Serialize: 0
   Catalyst::Controller: 0
-  Catalyst::Controller::REST: 0
-  Catalyst::Runtime: 5.80024
-  Catalyst::Utils: 0
+  CatalystX::ExtJS::Direct: 0
+  CatalystX::ExtJS::REST: 0
   Class::Accessor::Fast: 0
-  Config::Any: 0
-  DBIx::Class: 0.08127
-  HTML::Entities: 0
-  HTML::FormFu: 0.08
-  HTML::FormFu::ExtJS: 0.076
-  HTML::FormFu::Model::DBIC: 0.08
-  JSON::Any: 0
-  JSON::XS: 0
-  JavaScript::Dumper: 0.011
-  Lingua::EN::Inflect: 0
-  List::MoreUtils: 0
-  List::Util: 0
-  Moose: 1.21
-  Moose::Role: 0
-  Moose::Util::TypeConstraints: 0
-  MooseX::MethodAttributes: 0
   Path::Class: 0
-  Scalar::Util: 0
-  Try::Tiny: 0
-  namespace::autoclean: 0
 resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=CatalystX-ExtJS
   homepage: http://search.cpan.org/dist/CatalystX-ExtJS/
   repository: git://github.com/monken/catalystx-extjs.git
-version: 2.0.0
+version: 2.1.0
 x_Dist_Zilla:
   plugins:
     -

@@ -49,56 +49,15 @@ sub pmver {
 }
 
 eval { $v .= pmver('Carp','any version') };
-eval { $v .= pmver('Catalyst','any version') };
-eval { $v .= pmver('Catalyst::Action','any version') };
-eval { $v .= pmver('Catalyst::Action::Deserialize','any version') };
-eval { $v .= pmver('Catalyst::Action::REST','0.88') };
-eval { $v .= pmver('Catalyst::Action::RenderView','any version') };
-eval { $v .= pmver('Catalyst::Action::Serialize','any version') };
 eval { $v .= pmver('Catalyst::Controller','any version') };
-eval { $v .= pmver('Catalyst::Controller::REST','any version') };
-eval { $v .= pmver('Catalyst::Engine::HTTP','any version') };
-eval { $v .= pmver('Catalyst::Model::DBIC::Schema','any version') };
-eval { $v .= pmver('Catalyst::Request::REST::ForBrowsers','any version') };
-eval { $v .= pmver('Catalyst::Runtime','5.80024') };
-eval { $v .= pmver('Catalyst::Utils','any version') };
-eval { $v .= pmver('Catalyst::View::JSON','any version') };
-eval { $v .= pmver('Catalyst::View::TT','any version') };
+eval { $v .= pmver('CatalystX::ExtJS::Direct','any version') };
+eval { $v .= pmver('CatalystX::ExtJS::REST','any version') };
 eval { $v .= pmver('Class::Accessor::Fast','any version') };
-eval { $v .= pmver('Config::Any','any version') };
-eval { $v .= pmver('DBIx::Class','0.08127') };
-eval { $v .= pmver('DBIx::Class::ResultSet','any version') };
-eval { $v .= pmver('DBIx::Class::Schema','any version') };
 eval { $v .= pmver('File::Find','any version') };
-eval { $v .= pmver('File::Spec','any version') };
 eval { $v .= pmver('File::Temp','any version') };
-eval { $v .= pmver('FindBin','any version') };
-eval { $v .= pmver('Getopt::Long','any version') };
-eval { $v .= pmver('HTML::Entities','any version') };
-eval { $v .= pmver('HTML::FormFu','0.08') };
-eval { $v .= pmver('HTML::FormFu::ExtJS','0.076') };
-eval { $v .= pmver('HTML::FormFu::Model::DBIC','0.08') };
-eval { $v .= pmver('HTTP::Request::Common','any version') };
-eval { $v .= pmver('JSON','any version') };
-eval { $v .= pmver('JSON::Any','any version') };
-eval { $v .= pmver('JSON::XS','any version') };
-eval { $v .= pmver('JavaScript::Dumper','0.011') };
-eval { $v .= pmver('Lingua::EN::Inflect','any version') };
-eval { $v .= pmver('List::MoreUtils','any version') };
-eval { $v .= pmver('List::Util','any version') };
 eval { $v .= pmver('Module::Build','0.3601') };
-eval { $v .= pmver('Moose','1.21') };
-eval { $v .= pmver('Moose::Role','any version') };
-eval { $v .= pmver('Moose::Util::TypeConstraints','any version') };
-eval { $v .= pmver('MooseX::MethodAttributes','any version') };
 eval { $v .= pmver('Path::Class','any version') };
-eval { $v .= pmver('Path::Class::File','any version') };
-eval { $v .= pmver('Pod::Usage','any version') };
-eval { $v .= pmver('Scalar::Util','any version') };
 eval { $v .= pmver('Test::More','0.88') };
-eval { $v .= pmver('Test::WWW::Mechanize::Catalyst','any version') };
-eval { $v .= pmver('Try::Tiny','any version') };
-eval { $v .= pmver('namespace::autoclean','any version') };
 
 
 

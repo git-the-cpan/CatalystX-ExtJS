@@ -9,7 +9,7 @@
 #
 package CatalystX::ExtJS;
 BEGIN {
-  $CatalystX::ExtJS::VERSION = '2.1.0';
+  $CatalystX::ExtJS::VERSION = '2.1.1';
 }
 # ABSTRACT: Collection of modules for ExtJS
 1;
@@ -24,7 +24,7 @@ CatalystX::ExtJS - Collection of modules for ExtJS
 
 =head1 VERSION
 
-version 2.1.0
+version 2.1.1
 
 =head1 TUTORIALS
 
@@ -49,6 +49,10 @@ Generate an API for Ext.Direct from Catalyst Actions.
 =item L<CatalystX::ExtJS::REST>
 
 RESTful interface to your data objects.
+
+=item L<CatalystX::Controller::ExtJS::REST::SimpleExcel>
+
+Serialize data from L<CatalystX::ExtJS::REST> to Excel spreadsheets.
 
 =item L<CatalystX::Controller::ExtJS::ImageChooser>
 

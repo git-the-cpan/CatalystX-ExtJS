@@ -50,14 +50,22 @@ sub pmver {
 
 eval { $v .= pmver('Carp','any version') };
 eval { $v .= pmver('Catalyst::Controller','any version') };
+eval { $v .= pmver('Catalyst::Plugin::ConfigLoader','any version') };
+eval { $v .= pmver('Catalyst::Plugin::Unicode','any version') };
+eval { $v .= pmver('Catalyst::Plugin::Unicode::Encoding','any version') };
+eval { $v .= pmver('Catalyst::View::TT::Alloy','any version') };
 eval { $v .= pmver('CatalystX::ExtJS::Direct','any version') };
 eval { $v .= pmver('CatalystX::ExtJS::REST','any version') };
 eval { $v .= pmver('Class::Accessor::Fast','any version') };
+eval { $v .= pmver('Config::General','any version') };
+eval { $v .= pmver('DBIx::Class::RandomColumns','any version') };
+eval { $v .= pmver('DBIx::Class::TimeStamp','any version') };
 eval { $v .= pmver('File::Find','any version') };
 eval { $v .= pmver('File::Temp','any version') };
 eval { $v .= pmver('Module::Build','0.3601') };
 eval { $v .= pmver('Path::Class','any version') };
 eval { $v .= pmver('Test::More','0.88') };
+eval { $v .= pmver('namespace::autoclean','any version') };
 
 
 

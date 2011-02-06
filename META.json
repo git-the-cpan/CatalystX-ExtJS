@@ -34,10 +34,18 @@
          "requires" : {
             "Carp" : 0,
             "Catalyst::Controller" : 0,
+            "Catalyst::Plugin::ConfigLoader" : 0,
+            "Catalyst::Plugin::Unicode" : 0,
+            "Catalyst::Plugin::Unicode::Encoding" : 0,
+            "Catalyst::View::TT::Alloy" : 0,
             "CatalystX::ExtJS::Direct" : 0,
             "CatalystX::ExtJS::REST" : 0,
             "Class::Accessor::Fast" : 0,
-            "Path::Class" : 0
+            "Config::General" : 0,
+            "DBIx::Class::RandomColumns" : 0,
+            "DBIx::Class::TimeStamp" : 0,
+            "Path::Class" : 0,
+            "namespace::autoclean" : 0
          }
       },
       "test" : {
@@ -51,15 +59,15 @@
    "provides" : {
       "CatalystX::Controller::ExtJS::ImageChooser" : {
          "file" : "lib/CatalystX/Controller/ExtJS/ImageChooser.pm",
-         "version" : "v2.1.0"
+         "version" : "v2.1.1"
       },
       "CatalystX::ExtJS" : {
          "file" : "lib/CatalystX/ExtJS.pm",
-         "version" : "v2.1.0"
+         "version" : "v2.1.1"
       },
       "CatalystX::ExtJS::Tutorial" : {
          "file" : "lib/CatalystX/ExtJS/Tutorial.pm",
-         "version" : "v2.1.0"
+         "version" : "v2.1.1"
       }
    },
    "release_status" : "stable",
@@ -75,7 +83,7 @@
          "web" : "http://github.com/monken/catalystx-extjs"
       }
    },
-   "version" : "2.1.0",
+   "version" : "2.1.1",
    "x_Dist_Zilla" : {
       "plugins" : [
          {

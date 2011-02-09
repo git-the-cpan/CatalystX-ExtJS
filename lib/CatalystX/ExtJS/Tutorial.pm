@@ -9,7 +9,7 @@
 #
 package CatalystX::ExtJS::Tutorial;
 BEGIN {
-  $CatalystX::ExtJS::Tutorial::VERSION = '2.1.1';
+  $CatalystX::ExtJS::Tutorial::VERSION = '2.1.2';
 }
 #ABSTRACT: Introduction to CatalystX::ExtJS
 1;
@@ -23,7 +23,7 @@ CatalystX::ExtJS::Tutorial - Introduction to CatalystX::ExtJS
 
 =head1 VERSION
 
-version 2.1.1
+version 2.1.2
 
 =head1 INTRODUCTION
 
@@ -86,6 +86,7 @@ Now it's time to build some HTML and JavaScript. Add this to C<root/src/index>:
  <link rel="stylesheet" type="text/css" href="http://extjs.cachefly.net/ext-3.3.1/resources/css/ext-all.css" />
  <script type="text/javascript" src="http://extjs.cachefly.net/ext-3.3.1/adapter/ext/ext-base.js"></script>
  <script type="text/javascript" src="http://extjs.cachefly.net/ext-3.3.1/ext-all-debug.js"></script>
+ <script type="text/javascript" src="/api/src"></script>
  </head>
  <body>Hello World!</body>
  </html>

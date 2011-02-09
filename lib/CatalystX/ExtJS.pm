@@ -9,7 +9,7 @@
 #
 package CatalystX::ExtJS;
 BEGIN {
-  $CatalystX::ExtJS::VERSION = '2.1.1';
+  $CatalystX::ExtJS::VERSION = '2.1.2';
 }
 # ABSTRACT: Collection of modules for ExtJS
 1;
@@ -24,7 +24,7 @@ CatalystX::ExtJS - Collection of modules for ExtJS
 
 =head1 VERSION
 
-version 2.1.1
+version 2.1.2
 
 =head1 TUTORIALS
 

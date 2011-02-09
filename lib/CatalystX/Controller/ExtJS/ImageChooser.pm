@@ -9,7 +9,7 @@
 #
 package CatalystX::Controller::ExtJS::ImageChooser;
 BEGIN {
-  $CatalystX::Controller::ExtJS::ImageChooser::VERSION = '2.1.1';
+  $CatalystX::Controller::ExtJS::ImageChooser::VERSION = '2.1.2';
 }
 # ABSTRACT: Controller for the ExtJS ImageChooser class
 
@@ -82,7 +82,7 @@ CatalystX::Controller::ExtJS::ImageChooser - Controller for the ExtJS ImageChoos
 
 =head1 VERSION
 
-version 2.1.1
+version 2.1.2
 
 =head1 SYNOPSIS
 

@@ -52,6 +52,7 @@ eval { $v .= pmver('Carp','any version') };
 eval { $v .= pmver('Catalyst::Controller','any version') };
 eval { $v .= pmver('Catalyst::Controller::DBIC::API::RPC','any version') };
 eval { $v .= pmver('Catalyst::Plugin::ConfigLoader','any version') };
+eval { $v .= pmver('Catalyst::Plugin::Static::Simple','any version') };
 eval { $v .= pmver('Catalyst::Plugin::Unicode','any version') };
 eval { $v .= pmver('Catalyst::Plugin::Unicode::Encoding','any version') };
 eval { $v .= pmver('Catalyst::View::TT::Alloy','any version') };

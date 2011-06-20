@@ -20,7 +20,7 @@ my %module_build_args = (
     'Moritz Onken <onken@netcubed.de>'
   ],
   'dist_name' => 'CatalystX-ExtJS',
-  'dist_version' => '2.1.2',
+  'dist_version' => '2.1.3',
   'license' => 'bsd',
   'module_name' => 'CatalystX::ExtJS',
   'recommends' => {},
@@ -30,6 +30,7 @@ my %module_build_args = (
     'Catalyst::Controller' => '0',
     'Catalyst::Controller::DBIC::API::RPC' => '0',
     'Catalyst::Plugin::ConfigLoader' => '0',
+    'Catalyst::Plugin::Static::Simple' => '0',
     'Catalyst::Plugin::Unicode' => '0',
     'Catalyst::Plugin::Unicode::Encoding' => '0',
     'Catalyst::View::TT::Alloy' => '0',

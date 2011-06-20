@@ -10,7 +10,7 @@ build_requires:
 configure_requires:
   Module::Build: 0.3601
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200001, CPAN::Meta::Converter version 2.110240'
+generated_by: 'Dist::Zilla version 4.200007, CPAN::Meta::Converter version 2.110440'
 license: bsd
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -23,18 +23,19 @@ no_index:
 provides:
   CatalystX::Controller::ExtJS::ImageChooser:
     file: lib/CatalystX/Controller/ExtJS/ImageChooser.pm
-    version: v2.1.2
+    version: v2.1.3
   CatalystX::ExtJS:
     file: lib/CatalystX/ExtJS.pm
-    version: v2.1.2
+    version: v2.1.3
   CatalystX::ExtJS::Tutorial:
     file: lib/CatalystX/ExtJS/Tutorial.pm
-    version: v2.1.2
+    version: v2.1.3
 requires:
   Carp: 0
   Catalyst::Controller: 0
   Catalyst::Controller::DBIC::API::RPC: 0
   Catalyst::Plugin::ConfigLoader: 0
+  Catalyst::Plugin::Static::Simple: 0
   Catalyst::Plugin::Unicode: 0
   Catalyst::Plugin::Unicode::Encoding: 0
   Catalyst::View::TT::Alloy: 0
@@ -50,17 +51,17 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=CatalystX-ExtJS
   homepage: http://search.cpan.org/dist/CatalystX-ExtJS/
   repository: git://github.com/monken/catalystx-extjs.git
-version: 2.1.2
+version: 2.1.3
 x_Dist_Zilla:
   plugins:
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: '@Filter/GatherDir'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::CompileTests
       name: '@Filter/CompileTests'
-      version: 1.103030
+      version: 1.110930
     -
       class: Dist::Zilla::Plugin::HasVersionTests
       name: '@Filter/HasVersionTests'
@@ -76,15 +77,11 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::PodCoverageTests
       name: '@Filter/PodCoverageTests'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::PodSyntaxTests
       name: '@Filter/PodSyntaxTests'
-      version: 4.200001
-    -
-      class: Dist::Zilla::Plugin::PortabilityTests
-      name: '@Filter/PortabilityTests'
-      version: 1.101420
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::ReportVersions::Tiny
       name: '@Filter/ReportVersions::Tiny'
@@ -92,31 +89,31 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::PruneCruft
       name: '@Filter/PruneCruft'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::PruneFiles
       name: '@Filter/PruneFiles'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::ManifestSkip
       name: '@Filter/ManifestSkip'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::AutoPrereqs
       name: '@Filter/AutoPrereqs'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::ExtraTests
       name: '@Filter/ExtraTests'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::NextRelease
       name: '@Filter/NextRelease'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::PkgVersion
       name: '@Filter/PkgVersion'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::PodWeaver
       name: '@Filter/PodWeaver'
@@ -128,15 +125,15 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::ExecDir
       name: '@Filter/ExecDir'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::ShareDir
       name: '@Filter/ShareDir'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::Bugtracker
       name: '@Filter/Bugtracker'
-      version: 1.102670
+      version: 1.111080
     -
       class: Dist::Zilla::Plugin::Homepage
       name: '@Filter/Homepage'
@@ -144,63 +141,71 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Repository
       name: '@Filter/Repository'
-      version: 0.17
+      version: 0.18
     -
       class: Dist::Zilla::Plugin::MetaProvides::Package
       name: '@Filter/MetaProvides::Package'
-      version: 1.12044908
+      version: 1.12060501
     -
       class: Dist::Zilla::Plugin::MetaConfig
       name: '@Filter/MetaConfig'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::License
       name: '@Filter/License'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::MetaYAML
       name: '@Filter/MetaYAML'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::MetaJSON
       name: '@Filter/MetaJSON'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::ModuleBuild
       name: '@Filter/ModuleBuild'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::Readme
       name: '@Filter/Readme'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::Manifest
       name: '@Filter/Manifest'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::CheckChangeLog
       name: '@Filter/CheckChangeLog'
       version: 0.01
     -
-      class: Dist::Zilla::Plugin::UploadToCPAN
-      name: '@Filter/UploadToCPAN'
-      version: 4.200001
-    -
       class: Dist::Zilla::Plugin::Git::Check
-      name: '@Filter/Git/Check'
-      version: 1.103520
+      name: '@Filter/Git::Check'
+      version: 1.111590
     -
       class: Dist::Zilla::Plugin::Git::Commit
-      name: '@Filter/Git/Commit'
-      version: 1.103520
+      name: '@Filter/Git::Commit'
+      version: 1.111590
+    -
+      class: Dist::Zilla::Plugin::Git::CommitBuild
+      name: '@Filter/Git::CommitBuild'
+      version: 1.111590
     -
       class: Dist::Zilla::Plugin::Git::Tag
-      name: '@Filter/Git/Tag'
-      version: 1.103520
+      name: '@Filter/TagMaster'
+      version: 1.111590
+    -
+      class: Dist::Zilla::Plugin::Git::Tag
+      name: '@Filter/TagRelease'
+      version: 1.111590
     -
       class: Dist::Zilla::Plugin::Git::Push
-      name: '@Filter/Git/Push'
-      version: 1.103520
+      name: '@Filter/Git::Push'
+      version: 1.111590
+    -
+      class: Dist::Zilla::Plugin::UploadToCPAN
+      name: '@Filter/UploadToCPAN'
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::Prereqs
       config:
@@ -208,29 +213,37 @@ x_Dist_Zilla:
           phase: runtime
           type: requires
       name: Prereqs
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::MetaNoIndex
       name: MetaNoIndex
-      version: 1.101550
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
-      version: 4.200001
+      version: 4.200007
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':IncModules'
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':TestFiles'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ExecFiles'
-      version: 4.200001
+      version: 4.200007
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ShareFiles'
-      version: 4.200001
+      version: 4.200007
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':MainModule'
+      version: 4.200007
   zilla:
     class: Dist::Zilla::Dist::Builder
     config:
       is_trial: 0
-    version: 4.200001
+    version: 4.200007
